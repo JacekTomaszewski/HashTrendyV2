@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "TwitterApi";
+}
+
+<br />
+
+@for (var i = 0; i < 100; i++)
+{<img src="@ViewData["Avatar"+i+0]" /> @ViewData["Username" + i + 2]
+    <h1><b>@ViewData["Date" + i + 1]</b></h1>
+    <h3>@ViewData["Content" + i + 3]</h3>
+    <hr />
+}
+
+

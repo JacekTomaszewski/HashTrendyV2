@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebApiHash.Models.Device>
+
+@{
+    ViewBag.Title = "TableImei";
+}
+
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceUniqueId)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceUniqueId)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.DeviceId })
+        </td>
+    </tr>
+}
+
+</table>

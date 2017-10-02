@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
+using System.Xml.Linq;
 using TweetSharp;
 using WebApiHash.Context;
 using WebApiHash.Models;
@@ -319,13 +320,6 @@ namespace WebApiHash.Controllers
         }
 
 
-
-
-
-
-
-
-
         public ActionResult TwitterGooglePlusView()
         {
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
@@ -456,6 +450,11 @@ namespace WebApiHash.Controllers
 
         }
 
+        //pobranie rss i wywolanie z RssOperation
+        public ActionResult RssReader()
+        {
+            return View(Operation.RssOperation.RssReader.GetRssFeed());
+        }
 
         public ActionResult Create(String imei)
         {

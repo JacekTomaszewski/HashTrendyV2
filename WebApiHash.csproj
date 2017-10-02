@@ -278,6 +278,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\EFModels\Post.cs" />
     <Compile Include="Models\EFModels\Trend.cs" />
+    <Compile Include="Operation\RssOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -346,6 +347,7 @@
     <Content Include="Views\Hash\GooglePlusJSONencode.cshtml" />
     <Content Include="Views\Hash\TwitterExample.cshtml" />
     <Content Include="Views\Hash\GooglePlusAndTwitterView.cshtml" />
+    <Content Include="Views\Hash\RSSReader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

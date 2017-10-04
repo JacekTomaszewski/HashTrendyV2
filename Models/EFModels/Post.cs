@@ -16,7 +16,6 @@ namespace WebApiHash.Models
         public DateTime Date { get; set; }
 
         public string Avatar { get; set; }
-        public string Title { get; set; }
 
         public string Username { get; set; }
 

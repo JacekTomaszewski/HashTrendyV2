@@ -34,10 +34,11 @@ namespace WebApiHash.Controllers
 
         public ActionResult GetCR7Hashtag()
         {
-           string hashtagname = "#Cr7";
-           string replaceHashtag = hashtagname.Replace("#", "%23");
+            string hashtagname = "#Cr7";
+            string replaceHashtag = hashtagname.Replace("#", "%23");
             GetTwitterCR7Posts();
             GetGooglePlusPosts(replaceHashtag);
+            RssReaderTVNandWYBORCZAtoDB(); //wszystkie najnowsze z tvn24&wyborcza
             return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
         }
 
@@ -61,12 +62,12 @@ namespace WebApiHash.Controllers
                     ViewData["Username" + i + 2] = UsernameList[i];
                     ViewData["Content" + i + 3] = ContentList[i];
                     ViewData["Image" + i + 4] = ContentImageUrlList[i];
-                    ViewData["PostSource" + i + 5] = "Via: "+PostSourceList[i];
+                    ViewData["PostSource" + i + 5] = "Via: " + PostSourceList[i];
                 }
             }
-            
-            
-            
+
+
+
             return View(ViewData);
         }
 
@@ -105,39 +106,39 @@ namespace WebApiHash.Controllers
                 trends.First().Locations != null
                 )
             {
-                ViewData["Lokacja"] ="Trendy wyszukiwane dla: "+trends.First().Locations.First().Name;
+                ViewData["Lokacja"] = "Trendy wyszukiwane dla: " + trends.First().Locations.First().Name;
                 trends.ForEach(trnd =>
                     listTwitterStatus.Add("Name: " + trnd.Name));
-                 }
+            }
             string replaceHashtag;
             for (int i = 0; i < listTwitterStatus.Count; i++)
             {
                 ViewData["MyList" + i] = listTwitterStatus[i].ToString();
-                replaceHashtag = trends.ElementAt(i).Name.Replace("#","%23");
-                ViewData["MyLink" + i] = "/hash/twitterli?hashtagname="+replaceHashtag;
+                replaceHashtag = trends.ElementAt(i).Name.Replace("#", "%23");
+                ViewData["MyLink" + i] = "/hash/twitterli?hashtagname=" + replaceHashtag;
             }
             for (int i = 0; i < trends.Count; i++)
             {
                 GetTwitterPosts(trends.ElementAt(i).Name);
                 GetGooglePlusPosts(trends.ElementAt(i).Name.Replace("#", "%23"));
                 var duplicate = (from x in db.Trends where x.TrendName == trends.ElementAt(i).Name select x);
-                if(duplicate==null)
+                if (duplicate == null)
                 {
-               // GetTwitterPosts(trends.ElementAt(i).Name);       //TU PYTANIE - czy to ma tak działać? :)
-                twittrend.TrendName = trends.ElementAt(i).Name;
-                db.Trends.Add(twittrend);
-                db.SaveChanges();
+                    // GetTwitterPosts(trends.ElementAt(i).Name);       //TU PYTANIE - czy to ma tak działać? :)
+                    twittrend.TrendName = trends.ElementAt(i).Name;
+                    db.Trends.Add(twittrend);
+                    db.SaveChanges();
                 }
             }
             return View(ViewData);
         }
-       
+
         public ActionResult Twitterli(string hashtagname)
         {
             //localhost:50707/hash/twitterli?hashtagname=%23nazwahashtaga
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
             IEnumerable<string> tags;
-            Post twitterPost = new Post() {Hashtags = new List<Hashtag>() };
+            Post twitterPost = new Post() { Hashtags = new List<Hashtag>() };
             List<TwitterStatus> listTwitterStatus = new List<TwitterStatus>();
             var service = new TwitterService("O5YRKrovfS42vADDPv8NdC4ZS", "tDrCy3YypKhnIOBm0qgCipwGjoJVf7akHV6srkHnLHJm62WvMF");
             service.AuthenticateWith("859793491941093376-kqRIYWY9bWyS10ATfqAVdwk1ZaxloEJ", "hbOXipioFNcyOUyWbGdVAXvoVquETMl57AZUTcbMh3WRv");
@@ -147,16 +148,16 @@ namespace WebApiHash.Controllers
             {
                 listTwitterStatus = ((List<TwitterStatus>)twitterSearchResult.Statuses);
             }
-            for(int i=0; i<listTwitterStatus.Count; i++)
+            for (int i = 0; i < listTwitterStatus.Count; i++)
             {
-                ViewData["Avatar" + i +0] = listTwitterStatus[i].User.ProfileImageUrl;
+                ViewData["Avatar" + i + 0] = listTwitterStatus[i].User.ProfileImageUrl;
                 twitterPost.Avatar = listTwitterStatus[i].User.ProfileImageUrl;
                 ViewData["Date" + i + 1] = listTwitterStatus[i].User.CreatedDate;
-                twitterPost.Date= listTwitterStatus[i].User.CreatedDate;
-                ViewData["Username"+ i + 2] = listTwitterStatus[i].User.Name;
-                twitterPost.Username= listTwitterStatus[i].User.Name;
-                ViewData["Content"+i+3] = listTwitterStatus[i].Text;
-                twitterPost.ContentDescription= listTwitterStatus[i].Text;
+                twitterPost.Date = listTwitterStatus[i].User.CreatedDate;
+                ViewData["Username" + i + 2] = listTwitterStatus[i].User.Name;
+                twitterPost.Username = listTwitterStatus[i].User.Name;
+                ViewData["Content" + i + 3] = listTwitterStatus[i].Text;
+                twitterPost.ContentDescription = listTwitterStatus[i].Text;
                 tags = Regex.Split(listTwitterStatus[i].Text, @"\s+").Where(b => b.StartsWith("#"));
                 for (int x = 0; x < tags.Count(); x++)
                 {
@@ -174,14 +175,14 @@ namespace WebApiHash.Controllers
                 }
                 // nie moge znalezc direct linka twitterPost.DirectLinkToStatus = listTwitterStatus[i].
                 // twitterPost.DirectLinkToStatus=listTwitterStatus[i].Entities.Urls.Value;  
-                if (i < listTwitterStatus.Count) 
+                if (i < listTwitterStatus.Count)
                 {
                     db.Posts.Add(twitterPost);
                     db.SaveChanges();
-                }     
-                
+                }
+
             }
-           
+
 
             return View(ViewData);
         }
@@ -207,15 +208,15 @@ namespace WebApiHash.Controllers
                 var tweets =
                 (from search in context.Search
                  where search.Type == SearchType.Search &&
-                       search.Query == "#cr7" && search.Count==30
+                       search.Query == "#cr7" && search.Count == 30
                  select search)
                 .ToList();
                 for (int i = 0; i < tweets.ElementAt(0).Statuses.Count; i++)
                 {
                     twitterPost.PostSource = "Twitter";
-                    if(tweets[0].Statuses[i].Entities.MediaEntities.Count>0)
-                    { 
-                    twitterPost.ContentImageUrl = tweets[0].Statuses[i].Entities.MediaEntities[0].MediaUrl;
+                    if (tweets[0].Statuses[i].Entities.MediaEntities.Count > 0)
+                    {
+                        twitterPost.ContentImageUrl = tweets[0].Statuses[i].Entities.MediaEntities[0].MediaUrl;
                     }
                     twitterPost.Avatar = tweets[0].Statuses[i].User.ProfileImageUrl;
                     twitterPost.Date = tweets[0].Statuses[i].CreatedAt;
@@ -254,15 +255,15 @@ namespace WebApiHash.Controllers
                 {
                     string selectedNameOfElement = tags.ElementAt(x);
                     var querySearchForHashtag = (from p in db.Hashtags where p.HashtagName == selectedNameOfElement select p);
-                    //if (querySearchForHashtag.Count() == 0)
-                    //{
-                    //    hashtag.HashtagName = selectedNameOfElement;
-                    //    hashtag.Posts.Add(twitterPost);
-                    //    db.Hashtags.Add(hashtag);
-                    //    db.SaveChanges();
-                    //}
-                    //else
-                    //    twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
+                    if (querySearchForHashtag.Count() == 0)
+                    {
+                        hashtag.HashtagName = selectedNameOfElement;
+                        hashtag.Posts.Add(twitterPost);
+                        db.Hashtags.Add(hashtag);
+                        db.SaveChanges();
+                    }
+                    else
+                        twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
                 }
                 if (i < listTwitterStatus.Count)
                 {
@@ -280,7 +281,7 @@ namespace WebApiHash.Controllers
         {
             string result;
             string hashtagquery = hashtagname;
-            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagquery + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA"+"&maxResults=20";
+            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagquery + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
             WebRequest objWebRequest = WebRequest.Create(requestString);
             WebResponse objWebResponse = objWebRequest.GetResponse();
             Stream objWebStream = objWebResponse.GetResponseStream();
@@ -328,7 +329,7 @@ namespace WebApiHash.Controllers
             List<TwitterStatus> listTwitterStatus = new List<TwitterStatus>();
             var service = new TwitterService("O5YRKrovfS42vADDPv8NdC4ZS", "tDrCy3YypKhnIOBm0qgCipwGjoJVf7akHV6srkHnLHJm62WvMF");
             service.AuthenticateWith("859793491941093376-kqRIYWY9bWyS10ATfqAVdwk1ZaxloEJ", "hbOXipioFNcyOUyWbGdVAXvoVquETMl57AZUTcbMh3WRv");
-            var twitterSearchResult = service.Search(new SearchOptions { Q = (from x in db.Trends where x.DateCreated>DateTime.Now.AddHours(-1) select x.TrendName).ToString(), Count = 10, Resulttype = TwitterSearchResultType.Recent });
+            var twitterSearchResult = service.Search(new SearchOptions { Q = (from x in db.Trends where x.DateCreated > DateTime.Now.AddHours(-1) select x.TrendName).ToString(), Count = 10, Resulttype = TwitterSearchResultType.Recent });
             if (twitterSearchResult != null)
             {
                 listTwitterStatus = ((List<TwitterStatus>)twitterSearchResult.Statuses);
@@ -385,7 +386,7 @@ namespace WebApiHash.Controllers
             TwitterService service = new TwitterService(Key, Secret);
 
             OAuthRequestToken requestToken = service.GetRequestToken("http://localhost:51577/Hash/TwitterCallback");
-            
+
             Uri uri = service.GetAuthenticationUrl(requestToken);
 
             return Redirect(uri.ToString());
@@ -430,30 +431,60 @@ namespace WebApiHash.Controllers
             string Key = "O5YRKrovfS42vADDPv8NdC4ZS";
             string Secret = "tDrCy3YypKhnIOBm0qgCipwGjoJVf7akHV6srkHnLHJm62WvMF";
 
-           
-                TwitterService service = new TwitterService(Key, Secret);
 
-                OAuthAccessToken accessToken = service.GetAccessToken(requestToken, oauth_verifier);
+            TwitterService service = new TwitterService(Key, Secret);
 
-                service.AuthenticateWith(accessToken.Token, accessToken.TokenSecret);
+            OAuthAccessToken accessToken = service.GetAccessToken(requestToken, oauth_verifier);
 
-                VerifyCredentialsOptions option = new VerifyCredentialsOptions();
+            service.AuthenticateWith(accessToken.Token, accessToken.TokenSecret);
 
-                TwitterUser user = service.VerifyCredentials(option);
-                TempData["Name"] = user.Name;
-                TempData["Userpic"] = user.ProfileImageUrl;
-                TempData["Date"] = user.CreatedDate;
-                TempData["Status"] = user;
+            VerifyCredentialsOptions option = new VerifyCredentialsOptions();
+
+            TwitterUser user = service.VerifyCredentials(option);
+            TempData["Name"] = user.Name;
+            TempData["Userpic"] = user.ProfileImageUrl;
+            TempData["Date"] = user.CreatedDate;
+            TempData["Status"] = user;
             TempData["access"] = accessToken.Token;
             TempData["access secret"] = accessToken.TokenSecret;
             return View(TempData);
 
         }
 
-        //pobranie rss i wywolanie z RssOperation
-        public ActionResult RssReader()
+        public ActionResult RssReaderTVN()
         {
-            return View(Operation.RssOperation.RssReader.GetRssFeed());
+            IEnumerable<Post> TVN24RssFeeds = Operation.RssOperation.RssReaderTVN24.GetRssFeed();
+            for (int i = 0; i < TVN24RssFeeds.Count(); i++)
+            {
+                db.Posts.Add(TVN24RssFeeds.ElementAt(i));
+            }
+            db.SaveChanges();
+            return View(Operation.RssOperation.RssReaderTVN24.GetRssFeed());
+        }
+        public ActionResult RssReaderWyborcza()
+        {
+            IEnumerable<Post> WyborczaRssFeeds = Operation.RssOperation.RssReaderWyborcza.GetRssFeed();
+            for (int i = 0; i < WyborczaRssFeeds.Count(); i++)
+            {
+                db.Posts.Add(WyborczaRssFeeds.ElementAt(i));
+            }
+            db.SaveChanges();
+            return View(Operation.RssOperation.RssReaderWyborcza.GetRssFeed());
+        }
+
+        public void RssReaderTVNandWYBORCZAtoDB()
+            {
+            IEnumerable<Post> WyborczaRssFeeds = Operation.RssOperation.RssReaderWyborcza.GetRssFeed();
+            for (int i = 0; i < WyborczaRssFeeds.Count(); i++)
+            {
+                db.Posts.Add(WyborczaRssFeeds.ElementAt(i));
+            }
+            IEnumerable<Post> TVN24RssFeeds = Operation.RssOperation.RssReaderTVN24.GetRssFeed();
+            for (int i = 0; i < TVN24RssFeeds.Count(); i++)
+            {
+                db.Posts.Add(TVN24RssFeeds.ElementAt(i));
+            }
+            db.SaveChanges();
         }
 
         public ActionResult Create(String imei)

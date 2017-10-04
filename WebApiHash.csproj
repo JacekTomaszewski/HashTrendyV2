@@ -347,7 +347,8 @@
     <Content Include="Views\Hash\GooglePlusJSONencode.cshtml" />
     <Content Include="Views\Hash\TwitterExample.cshtml" />
     <Content Include="Views\Hash\GooglePlusAndTwitterView.cshtml" />
-    <Content Include="Views\Hash\RSSReader.cshtml" />
+    <Content Include="Views\Hash\RssReaderWyborcza.cshtml" />
+    <Content Include="Views\Hash\RssReaderTVN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

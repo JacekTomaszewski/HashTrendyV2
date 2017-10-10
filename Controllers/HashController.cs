@@ -43,6 +43,16 @@ namespace WebApiHash.Controllers
         }
 
 
+
+        public ActionResult GetHashtag(string hashtagname)
+        {
+            GetGooglePlusPosts(hashtagname.Replace("#", "%23"));
+            GetTwitterPosts(hashtagname);
+            RssReaderTVNandWYBORCZAtoDB(); //wszystkie najnowsze z tvn24&wyborcza
+            return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
+        }
+
+
         public ActionResult GooglePlusAndTwitterView()
         {
             var PostsCount = (from x in db.Posts select x).Count();
@@ -108,28 +118,33 @@ namespace WebApiHash.Controllers
             {
                 ViewData["Lokacja"] = "Trendy wyszukiwane dla: " + trends.First().Locations.First().Name;
                 trends.ForEach(trnd =>
-                    listTwitterStatus.Add("Name: " + trnd.Name));
+                    listTwitterStatus.Add(trnd.Name));
             }
             string replaceHashtag;
             for (int i = 0; i < listTwitterStatus.Count; i++)
             {
                 ViewData["MyList" + i] = listTwitterStatus[i].ToString();
                 replaceHashtag = trends.ElementAt(i).Name.Replace("#", "%23");
-                ViewData["MyLink" + i] = "/hash/twitterli?hashtagname=" + replaceHashtag;
+                ViewData["MyLink" + i] = "/hash/GetHashtag?hashtagname=" + replaceHashtag;
             }
-            for (int i = 0; i < trends.Count; i++)
-            {
-                GetTwitterPosts(trends.ElementAt(i).Name);
-                GetGooglePlusPosts(trends.ElementAt(i).Name.Replace("#", "%23"));
-                var duplicate = (from x in db.Trends where x.TrendName == trends.ElementAt(i).Name select x);
-                if (duplicate == null)
-                {
-                    // GetTwitterPosts(trends.ElementAt(i).Name);       //TU PYTANIE - czy to ma tak działać? :)
-                    twittrend.TrendName = trends.ElementAt(i).Name;
-                    db.Trends.Add(twittrend);
-                    db.SaveChanges();
-                }
-            }
+
+            //DODAWNANIE DO DB (STRASZNIE MULI) - i ostatnio coś się nie odpalało, moze przez to przeszukiwanie duplikatów
+
+            //for (int i = 0; i < trends.Count; i++)
+            //{
+            //    GetTwitterPosts(trends.ElementAt(i).Name);
+            //    GetGooglePlusPosts(trends.ElementAt(i).Name.Replace("#", "%23"));
+            //    var duplicate = (from x in db.Trends where x.TrendName == trends.ElementAt(i).Name select x);
+            //    if (duplicate == null)
+            //    {
+            //        // GetTwitterPosts(trends.ElementAt(i).Name);       //TU PYTANIE - czy to ma tak działać? :)
+            //        twittrend.TrendName = trends.ElementAt(i).Name;
+            //        db.Trends.Add(twittrend);
+            //        db.SaveChanges();
+            //    }
+            //}
+
+
             return View(ViewData);
         }
 
@@ -232,15 +247,14 @@ namespace WebApiHash.Controllers
         public void GetTwitterPosts(string hashtagname)
         {
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
-            IEnumerable<string> tags;
+            List<string> tags = new List<string>();
             Post twitterPost = new Post() { Hashtags = new List<Hashtag>() };
             twitterPost.PostSource = "Twitter";
             List<TwitterStatus> listTwitterStatus = new List<TwitterStatus>();
             var service = new TwitterService("O5YRKrovfS42vADDPv8NdC4ZS", "tDrCy3YypKhnIOBm0qgCipwGjoJVf7akHV6srkHnLHJm62WvMF");
             service.AuthenticateWith("859793491941093376-kqRIYWY9bWyS10ATfqAVdwk1ZaxloEJ", "hbOXipioFNcyOUyWbGdVAXvoVquETMl57AZUTcbMh3WRv");
-            var twitterSearchResult = service.Search(new SearchOptions { Q = "#cr7", Count = 100, Resulttype = TwitterSearchResultType.Recent });
+            var twitterSearchResult = service.Search(new SearchOptions { Q = hashtagname, Count = 100, Resulttype = TwitterSearchResultType.Recent });
             if (twitterSearchResult != null)
-
             {
                 listTwitterStatus = ((List<TwitterStatus>)twitterSearchResult.Statuses);
             }
@@ -250,26 +264,45 @@ namespace WebApiHash.Controllers
                 twitterPost.Date = listTwitterStatus[i].User.CreatedDate;
                 twitterPost.Username = listTwitterStatus[i].User.Name;
                 twitterPost.ContentDescription = listTwitterStatus[i].Text;
-                tags = Regex.Split(listTwitterStatus[i].Text, @"\s+").Where(b => b.StartsWith("#"));
-                for (int x = 0; x < tags.Count(); x++)
-                {
-                    string selectedNameOfElement = tags.ElementAt(x);
-                    var querySearchForHashtag = (from p in db.Hashtags where p.HashtagName == selectedNameOfElement select p);
-                    if (querySearchForHashtag.Count() == 0)
-                    {
-                        hashtag.HashtagName = selectedNameOfElement;
-                        hashtag.Posts.Add(twitterPost);
-                        db.Hashtags.Add(hashtag);
-                        db.SaveChanges();
-                    }
-                    else
-                        twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
-                }
-                if (i < listTwitterStatus.Count)
-                {
-                    db.Posts.Add(twitterPost);
+                //tags = Regex.Split(listTwitterStatus[i].Text, @"\s+").Where(b => b.StartsWith(hashtagname));
+                //if(listTwitterStatus[i].Entities.HashTags.Count>0)
+                //for (int y = 0; y < listTwitterStatus[i].Entities.HashTags.Count; y++)
+                //{ 
+                //    tags.Add(listTwitterStatus[i].Entities.HashTags[y].Text);
+
+                //    //string selectedNameOfElement = tags.ElementAt(x);
+                //    //var querySearchForHashtag = (from p in db.Hashtags where p.HashtagName == selectedNameOfElement select p);
+                //    //if (querySearchForHashtag.Count() == 0)
+                //    //{
+                //    //    hashtag.HashtagName = selectedNameOfElement;
+                //    //    hashtag.Posts.Add(twitterPost);
+                //    //    db.Hashtags.Add(hashtag);
+                //    //    db.SaveChanges();
+                //    //}
+                //    //else
+                //    //    twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
+
+                //    try
+                //    {
+                //        hashtag.HashtagName = tags.ElementAt(y);
+                //        hashtag.Posts.Add(twitterPost);
+                //        db.Hashtags.Add(hashtag);
+                //        db.SaveChanges();
+                //    }
+                //    catch (Exception e)
+                //    {
+                //        twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
+                //        db.Posts.Add(twitterPost);
+                //        db.SaveChanges();
+                //    }
+
+                //}
+                //else
+                //{
+                db.Posts.Add(twitterPost);
                     db.SaveChanges();
-                }
+               // }
+
 
             }
         }
@@ -280,8 +313,7 @@ namespace WebApiHash.Controllers
         public void GetGooglePlusPosts(string hashtagname)
         {
             string result;
-            string hashtagquery = hashtagname;
-            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagquery + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
+            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagname + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
             WebRequest objWebRequest = WebRequest.Create(requestString);
             WebResponse objWebResponse = objWebRequest.GetResponse();
             Stream objWebStream = objWebResponse.GetResponseStream();

@@ -128,21 +128,14 @@ namespace WebApiHash.Controllers
                 ViewData["MyLink" + i] = "/hash/GetHashtag?hashtagname=" + replaceHashtag;
             }
 
-            //DODAWNANIE DO DB (STRASZNIE MULI) - i ostatnio coś się nie odpalało, moze przez to przeszukiwanie duplikatów
-
-            //for (int i = 0; i < trends.Count; i++)
-            //{
-            //    GetTwitterPosts(trends.ElementAt(i).Name);
-            //    GetGooglePlusPosts(trends.ElementAt(i).Name.Replace("#", "%23"));
-            //    var duplicate = (from x in db.Trends where x.TrendName == trends.ElementAt(i).Name select x);
-            //    if (duplicate == null)
-            //    {
-            //        // GetTwitterPosts(trends.ElementAt(i).Name);       //TU PYTANIE - czy to ma tak działać? :)
-            //        twittrend.TrendName = trends.ElementAt(i).Name;
-            //        db.Trends.Add(twittrend);
-            //        db.SaveChanges();
-            //    }
-            //}
+            for (int i = 0; i < trends.Count; i++)
+            {
+                    twittrend.TrendName = trends.ElementAt(i).Name;
+                    twittrend.DateCreated = DateTime.Now;
+                    db.Trends.Add(twittrend);
+                    db.SaveChanges();
+            }
+        
 
 
             return View(ViewData);
@@ -247,7 +240,7 @@ namespace WebApiHash.Controllers
         public void GetTwitterPosts(string hashtagname)
         {
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
-            List<string> tags = new List<string>();
+            IEnumerable<string> tags;
             Post twitterPost = new Post() { Hashtags = new List<Hashtag>() };
             twitterPost.PostSource = "Twitter";
             List<TwitterStatus> listTwitterStatus = new List<TwitterStatus>();
@@ -264,44 +257,30 @@ namespace WebApiHash.Controllers
                 twitterPost.Date = listTwitterStatus[i].User.CreatedDate;
                 twitterPost.Username = listTwitterStatus[i].User.Name;
                 twitterPost.ContentDescription = listTwitterStatus[i].Text;
-                //tags = Regex.Split(listTwitterStatus[i].Text, @"\s+").Where(b => b.StartsWith(hashtagname));
-                //if(listTwitterStatus[i].Entities.HashTags.Count>0)
-                //for (int y = 0; y < listTwitterStatus[i].Entities.HashTags.Count; y++)
-                //{ 
-                //    tags.Add(listTwitterStatus[i].Entities.HashTags[y].Text);
+                tags = Regex.Split(listTwitterStatus[i].Text, @"\s+").Where(b => b.StartsWith("#"));
+                for (int x = 0; x < tags.Count(); x++)
+                {
+                        hashtag.HashtagName = tags.ElementAt(x);
+                        hashtag.Posts.Add(twitterPost);
+                        db.Hashtags.Add(hashtag);
+                        db.SaveChanges();
+                }
 
-                //    //string selectedNameOfElement = tags.ElementAt(x);
-                //    //var querySearchForHashtag = (from p in db.Hashtags where p.HashtagName == selectedNameOfElement select p);
-                //    //if (querySearchForHashtag.Count() == 0)
-                //    //{
-                //    //    hashtag.HashtagName = selectedNameOfElement;
-                //    //    hashtag.Posts.Add(twitterPost);
-                //    //    db.Hashtags.Add(hashtag);
-                //    //    db.SaveChanges();
-                //    //}
-                //    //else
-                //    //    twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
-
-                //    try
-                //    {
-                //        hashtag.HashtagName = tags.ElementAt(y);
-                //        hashtag.Posts.Add(twitterPost);
-                //        db.Hashtags.Add(hashtag);
-                //        db.SaveChanges();
-                //    }
-                //    catch (Exception e)
-                //    {
-                //        twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
-                //        db.Posts.Add(twitterPost);
-                //        db.SaveChanges();
-                //    }
-
-                //}
-                //else
-                //{
-                db.Posts.Add(twitterPost);
+                    //    try
+                    //    {
+                    //        hashtag.HashtagName = tags.ElementAt(y);
+                    //        hashtag.Posts.Add(twitterPost);
+                    //        db.Hashtags.Add(hashtag);
+                    //        db.SaveChanges();
+                    //    }
+                    //    catch (Exception e)
+                    //    {
+                    //        twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
+                    //        db.Posts.Add(twitterPost);
+                    //        db.SaveChanges();
+                    //    }
+                    db.Posts.Add(twitterPost);
                     db.SaveChanges();
-               // }
 
 
             }

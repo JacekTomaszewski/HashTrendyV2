@@ -461,28 +461,13 @@ namespace WebApiHash.Controllers
             return View(TempData);
 
         }
-
-        public ActionResult RssReaderTVN()
+        public ActionResult RssReaderListHashtag()
         {
-            IEnumerable<Post> TVN24RssFeeds = Operation.RssOperation.RssReaderTVN24.GetRssFeed();
-            for (int i = 0; i < TVN24RssFeeds.Count(); i++)
-            {
-                db.Posts.Add(TVN24RssFeeds.ElementAt(i));
-            }
-            db.SaveChanges();
-            return View(Operation.RssOperation.RssReaderTVN24.GetRssFeed());
+            var listHashtag = (from x in db.Hashtags select x.HashtagName.ToString().Replace("#", "")).ToList(); //mozna hashtagi z tabeli trendy oraz zrobienie selekcji np. na około 50 hashtagow popularnych
+            var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" || po.PostSource == "TVN24" ||po.PostSource== "RMF24Swiat" || po.PostSource== "RMF24Sport").ToList();
+            var resultList = postRss.Where(c => listHashtag.Any(l => c.ContentDescription.Contains(l))).ToList();
+            return View(resultList);
         }
-        public ActionResult RssReaderWyborcza()
-        {
-            IEnumerable<Post> WyborczaRssFeeds = Operation.RssOperation.RssReaderWyborcza.GetRssFeed();
-            for (int i = 0; i < WyborczaRssFeeds.Count(); i++)
-            {
-                db.Posts.Add(WyborczaRssFeeds.ElementAt(i));
-            }
-            db.SaveChanges();
-            return View(Operation.RssOperation.RssReaderWyborcza.GetRssFeed());
-        }
-
         public void RssReaderTVNandWYBORCZAtoDB()
             {
             IEnumerable<Post> WyborczaRssFeeds = Operation.RssOperation.RssReaderWyborcza.GetRssFeed();

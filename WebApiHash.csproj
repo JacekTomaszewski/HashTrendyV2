@@ -272,6 +272,10 @@
     <Compile Include="Migrations\201710081855367_aa1.Designer.cs">
       <DependentUpon>201710081855367_aa1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710131833300_uniquehashtags.cs" />
+    <Compile Include="Migrations\201710131833300_uniquehashtags.Designer.cs">
+      <DependentUpon>201710131833300_uniquehashtags.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EFModels\Device.cs" />
@@ -355,6 +359,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Twitter\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -411,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710081855367_aa1.resx">
       <DependentUpon>201710081855367_aa1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710131833300_uniquehashtags.resx">
+      <DependentUpon>201710131833300_uniquehashtags.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

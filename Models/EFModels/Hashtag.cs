@@ -12,7 +12,8 @@ namespace WebApiHash.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int HashtagId { get; set; }
-
+        [Index("HashtagName", IsUnique = true)]
+        [MaxLength(200)]
         public string HashtagName { get; set; }
 
         [Index("IX_HashAndDevice", 2, IsUnique = true)]

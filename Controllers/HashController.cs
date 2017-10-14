@@ -36,10 +36,10 @@ namespace WebApiHash.Controllers
         {
             string hashtagname = "#Cr7";
             string replaceHashtag = hashtagname.Replace("#", "%23");
-            GetTwitterCR7Posts();
+            GetTwitterPosts("#cr7");
             GetGooglePlusPosts(replaceHashtag);
-            RssReaderTVNandWYBORCZAtoDB(); //wszystkie najnowsze z tvn24&wyborcza
-            return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
+           // RssReaderTVNandWYBORCZAtoDB(); //wszystkie najnowsze z tvn24&wyborcza
+           return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
         }
 
 
@@ -48,7 +48,7 @@ namespace WebApiHash.Controllers
         {
             GetGooglePlusPosts(hashtagname.Replace("#", "%23"));
             GetTwitterPosts(hashtagname);
-            RssReaderTVNandWYBORCZAtoDB(); //wszystkie najnowsze z tvn24&wyborcza
+         //   RssReaderTVNandWYBORCZAtoDB(); //wszystkie najnowsze z tvn24&wyborcza
             return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
         }
 
@@ -240,7 +240,6 @@ namespace WebApiHash.Controllers
         public void GetTwitterPosts(string hashtagname)
         {
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
-            IEnumerable<string> tags;
             Post twitterPost = new Post() { Hashtags = new List<Hashtag>() };
             twitterPost.PostSource = "Twitter";
             List<TwitterStatus> listTwitterStatus = new List<TwitterStatus>();
@@ -257,32 +256,31 @@ namespace WebApiHash.Controllers
                 twitterPost.Date = listTwitterStatus[i].User.CreatedDate;
                 twitterPost.Username = listTwitterStatus[i].User.Name;
                 twitterPost.ContentDescription = listTwitterStatus[i].Text;
-                tags = Regex.Split(listTwitterStatus[i].Text, @"\s+").Where(b => b.StartsWith("#"));
-                for (int x = 0; x < tags.Count(); x++)
+                for (int x = 0; x < listTwitterStatus[i].Entities.HashTags.Count; x++)
                 {
-                        hashtag.HashtagName = tags.ElementAt(x);
-                        hashtag.Posts.Add(twitterPost);
-                        db.Hashtags.Add(hashtag);
-                        db.SaveChanges();
+                    try
+                    { 
+                    hashtag.HashtagName = listTwitterStatus[i].Entities.HashTags[x].Text;
+                    hashtag.Posts.Add(twitterPost);
+                    db.Hashtags.Add(hashtag);
+                    db.SaveChanges();
+                    }
+                    catch (Exception e)
+                    {
+                        db.Hashtags.Attach(hashtag);
+                        twitterPost.Hashtags.Add(hashtag);
+                    }
                 }
 
-                    //    try
-                    //    {
-                    //        hashtag.HashtagName = tags.ElementAt(y);
-                    //        hashtag.Posts.Add(twitterPost);
-                    //        db.Hashtags.Add(hashtag);
-                    //        db.SaveChanges();
-                    //    }
-                    //    catch (Exception e)
-                    //    {
-                    //        twitterPost.Hashtags.Add(querySearchForHashtag.FirstOrDefault());
-                    //        db.Posts.Add(twitterPost);
-                    //        db.SaveChanges();
-                    //    }
+                try
+                { 
                     db.Posts.Add(twitterPost);
                     db.SaveChanges();
+                }
+                catch(Exception e)
+                {
 
-
+                }
             }
         }
 
@@ -305,7 +303,8 @@ namespace WebApiHash.Controllers
 
             Post googlePost = new Post();
             googlePost.PostSource = "Google";
-            //Hashtag hashtag = new Hashtag();
+            Hashtag hashtag = new Hashtag();
+            IEnumerable<string> tags;
             ViewData["rozmiar"] = post.items.Count;
             for (int i = 0; i < post.items.Count; i++)
             {
@@ -313,21 +312,29 @@ namespace WebApiHash.Controllers
                 googlePost.Date = System.DateTime.Parse(post.items[i].published);
                 googlePost.Username = post.items[i].actor.displayName;
                 googlePost.DirectLinkToStatus = post.items[i].url;
-                //tags = regex.split(post.items[i].@object.attachments[0].content, @"\s+").where(b => b.startswith("#"));
-                //for (int x = 0; x < tags.count(); x++)
-                //{
-                //    hashtag.hashtagname = tags.elementat(x);
-                //    db.hashtags.add(hashtag);
-                //    db.savechanges();
-                //    pomocy z foreign key !!! - duplikaty
-                //}
-                googlePost.ContentDescription = post.items[i].title;
-                //if (post.items[i].@object.attachments[0].image != null)
-                //{
-                //   googlePost.ContentImageUrl = post.items[i].@object.attachments[0].image.url;
-                //}
-                db.Posts.Add(googlePost);
-                db.SaveChanges();
+                tags = Regex.Split(post.items[i].@object.content, @"\s+").Where(b => b.StartsWith("#"));
+                for (int x = 0; x < tags.Count(); x++)
+                    try
+                    {
+                        hashtag.HashtagName = tags.ElementAt(x);
+                        hashtag.Posts.Add(googlePost);
+                        db.Hashtags.Add(hashtag);
+                        db.SaveChanges();
+                    }
+                    catch (Exception e)
+                    {
+                        db.Hashtags.Attach(hashtag);
+                        googlePost.Hashtags.Add(hashtag);
+                    }
+
+                googlePost.ContentDescription = post.items[i].@object.content;
+                try
+                {
+
+                    db.Posts.Add(googlePost);
+                    db.SaveChanges();
+                }
+                catch { }
             }
         }
 
@@ -461,12 +468,10 @@ namespace WebApiHash.Controllers
             return View(TempData);
 
         }
-        public ActionResult RssReaderListHashtag()
+        public ActionResult RssReaderListHashtag(string hashtagname)
         {
-            var listHashtag = (from x in db.Hashtags select x.HashtagName.ToString().Replace("#", "")).ToList(); //mozna hashtagi z tabeli trendy oraz zrobienie selekcji np. na około 50 hashtagow popularnych
-            var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" || po.PostSource == "TVN24" ||po.PostSource== "RMF24Swiat" || po.PostSource== "RMF24Sport").ToList();
-            var resultList = postRss.Where(c => listHashtag.Any(l => c.ContentDescription.Contains(l))).ToList();
-            return View(resultList);
+            var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24Swiat" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
+            return View(postRss);
         }
         public void RssReaderTVNandWYBORCZAtoDB()
             {

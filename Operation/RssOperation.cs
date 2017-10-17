@@ -22,6 +22,7 @@ namespace WebApiHash.Operation
                 var feeds = from feed in feedXml.Descendants("item")
                             select new Post
                             {
+                                Username = "TVN24",
                                 DirectLinkToStatus = feed.Element("link").Value,
                                 ContentDescription = Regex.Replace(feed.Element("description").Value, @"(<img\/?[^>]+>)", @"",
                                 RegexOptions.IgnoreCase),
@@ -45,12 +46,57 @@ namespace WebApiHash.Operation
                 var feeds = from feed in feedXml.Descendants("item")
                             select new Post
                             {
+                                Username="Wyborcza",
                                 ContentDescription = feed.Element("title").Value,
                                 DirectLinkToStatus = feed.Element("link").Value,
                                 PostSource = "Wyborcza",
+                                Avatar= "~/App_Data/RMF.jpg",
                                 Date = System.Convert.ToDateTime(feed.Element("pubDate").Value)
             };
                 
+                return feeds;
+
+            }
+        }
+
+        public class RssReaderRMF24Swiat
+        {
+            private static string _blogURL = "http://www.rmf24.pl/fakty/swiat/feed";
+            public static IEnumerable<Post> GetRssFeed()
+            {
+                XDocument feedXml = XDocument.Load(_blogURL);
+                var feeds = from feed in feedXml.Descendants("item")
+                            select new Post
+                            {
+                                Username = "RMF24 Swiat",
+                                ContentDescription = feed.Element("title").Value,
+                                DirectLinkToStatus = feed.Element("link").Value,
+                                PostSource = "RMF24 Swiat",
+                                Date = System.Convert.ToDateTime(feed.Element("pubDate").Value)
+                            };
+
+                return feeds;
+
+            }
+        }
+
+        public class RssReaderRMF24Sport
+        {
+            private static string _blogURL = "http://www.rmf24.pl/sport/feed";
+            public static IEnumerable<Post> GetRssFeed()
+            {
+                XDocument feedXml = XDocument.Load(_blogURL);
+                var feeds = from feed in feedXml.Descendants("item")
+                            select new Post
+                            {
+                                Avatar= "D:/ProgramowanieGIT/HashTrendyV2/App_Data/RMF.jpg",
+                                Username = "RMF24 Sport",
+                                ContentDescription = feed.Element("title").Value,
+                                DirectLinkToStatus = feed.Element("link").Value,
+                                PostSource = "RMF24 Sport",
+                                Date = System.Convert.ToDateTime(feed.Element("pubDate").Value)
+                            };
+
                 return feeds;
 
             }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using LinqToTwitter;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,18 +7,18 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Web;
+using System.Web.Mvc;
+using TweetSharp;
 using WebApiHash.Context;
 using WebApiHash.Models;
 
-namespace WebApiHash.Operation
+namespace WebApiHash.Controllers
 {
-    public class GooglePlusGetHashTagOperation
+    public class GooglePlusController : Controller
     {
-
         public void GetGooglePlusPosts(string hashtagname)
         {
             HashContext db = new HashContext();
-
             string result;
             string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagname + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
             WebRequest objWebRequest = WebRequest.Create(requestString);
@@ -27,9 +28,7 @@ namespace WebApiHash.Operation
             {
                 result = objStreamReader.ReadToEnd();
             }
-
             GooglePlusPost post = JsonConvert.DeserializeObject<GooglePlusPost>(result);
-
             Post googlePost = new Post();
             googlePost.PostSource = "Google";
             Hashtag hashtag = new Hashtag();
@@ -40,9 +39,13 @@ namespace WebApiHash.Operation
                 googlePost.Date = System.DateTime.Parse(post.items[i].published);
                 googlePost.Username = post.items[i].actor.displayName;
                 googlePost.DirectLinkToStatus = post.items[i].url;
-                if (post.items[i].@object.attachments[0].image != null)
+                if (post.items[i].@object.attachments != null)
                 {
-                    googlePost.ContentImageUrl = post.items[i].@object.attachments[0].image.url;
+                    try
+                    {
+                        googlePost.ContentImageUrl = post.items[i].@object.attachments[0].image.url;
+                    }
+                    catch { }
                 }
                 tags = Regex.Split(post.items[i].@object.content, @"\s+").Where(b => b.StartsWith("#"));
                 for (int x = 0; x < tags.Count(); x++)
@@ -62,7 +65,6 @@ namespace WebApiHash.Operation
                 googlePost.ContentDescription = post.items[i].@object.content;
                 try
                 {
-
                     db.Posts.Add(googlePost);
                     db.SaveChanges();
                 }

@@ -31,5 +31,20 @@ namespace WebApiHash.Controllers
             return View();
         }
 
+        public ActionResult GetPostsFromTrendsToDb()
+        {
+            HashController hash = new HashController();
+            System.Net.WebClient client = new System.Net.WebClient();
+            DateTime dt1 = DateTime.Now.AddHours(-1.1);
+            var result = (from m in db.Trends
+                          where m.DateCreated > dt1
+                          select m).ToList();
+            for (int i = 0; i < result.Count; i++)
+            {
+                hash.GetHashtagPosts(result.ElementAt(i).TrendName);
+            }
+            return View(result);
+        }
+
     }
 }

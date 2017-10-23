@@ -178,3 +178,4 @@ E:\ProjektSyneoGIT\obj\Debug\WebApiHash.csproj.GenerateResource.Cache
 E:\ProjektSyneoGIT\obj\Debug\WebApiHash.dll
 E:\ProjektSyneoGIT\obj\Debug\WebApiHash.pdb
 D:\ProgramowanieGIT\HashTrendyV2\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources
+E:\ProjektSyneoGIT\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources

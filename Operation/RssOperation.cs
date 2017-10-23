@@ -101,5 +101,30 @@ namespace WebApiHash.Operation
 
             }
         }
+
+        public void RssReadertoDB()
+        {
+            IEnumerable<Post> WyborczaRssFeeds = RssReaderWyborcza.GetRssFeed();
+            for (int i = 0; i < WyborczaRssFeeds.Count(); i++)
+            {
+                db.Posts.Add(WyborczaRssFeeds.ElementAt(i));
+            }
+            IEnumerable<Post> TVN24RssFeeds = RssReaderTVN24.GetRssFeed();
+            for (int i = 0; i < TVN24RssFeeds.Count(); i++)
+            {
+                db.Posts.Add(TVN24RssFeeds.ElementAt(i));
+            }
+            IEnumerable<Post> RMF24SwiatRssFeeds = RssReaderRMF24Swiat.GetRssFeed();
+            for (int i = 0; i < RMF24SwiatRssFeeds.Count(); i++)
+            {
+                db.Posts.Add(RMF24SwiatRssFeeds.ElementAt(i));
+            }
+            IEnumerable<Post> RMF24SportRssFeeds = RssReaderRMF24Sport.GetRssFeed();
+            for (int i = 0; i < RMF24SportRssFeeds.Count(); i++)
+            {
+                db.Posts.Add(RMF24SportRssFeeds.ElementAt(i));
+            }
+            db.SaveChanges();
+        }
     }
 }

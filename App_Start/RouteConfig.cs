@@ -15,13 +15,13 @@ namespace WebApiHash
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Hash", action = "Twitterli", id = UrlParameter.Optional }
+                defaults: new { controller = "Twitter", action = "TwitterTrends", id = UrlParameter.Optional }
             );
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "CreateImei",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Hash", action = "Create", id = UrlParameter.Optional }
+                defaults: new { controller = "Imei", action = "Create", id = UrlParameter.Optional }
             );
         }
 

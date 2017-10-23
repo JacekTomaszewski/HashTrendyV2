@@ -186,6 +186,7 @@
     <Compile Include="Context\HashContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HashController.cs" />
+    <Compile Include="Controllers\ImeiController.cs" />
     <Compile Include="Controllers\InstagramCallback.aspx.cs">
       <DependentUpon>InstagramCallback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +202,8 @@
       <DependentUpon>InstagramRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\TwitterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -286,7 +289,9 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\EFModels\Post.cs" />
     <Compile Include="Models\EFModels\Trend.cs" />
+    <Compile Include="Operation\GooglePlusGetHashTagOperation.cs" />
     <Compile Include="Operation\RssOperation.cs" />
+    <Compile Include="Operation\TwitterGetHashTagOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -347,21 +352,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Hash\Create.cshtml" />
-    <Content Include="Views\Hash\Index.cshtml" />
-    <Content Include="Views\Hash\Delete.cshtml" />
-    <Content Include="Views\Hash\TwitterCallback.cshtml" />
-    <Content Include="Views\Hash\Twitterli.cshtml" />
-    <Content Include="Views\Hash\TwitterTrends.cshtml" />
-    <Content Include="Views\Hash\GooglePlusJSONencode.cshtml" />
-    <Content Include="Views\Hash\TwitterExample.cshtml" />
-    <Content Include="Views\Hash\PostsView.cshtml" />
+    <Content Include="Views\Imei\Create.cshtml" />
+    <Content Include="Views\Imei\Index.cshtml" />
+    <Content Include="Views\Imei\Delete.cshtml" />
+    <Content Include="Views\Twitter\TwitterCallback.cshtml" />
+    <Content Include="Views\Twitter\TwitterTrends.cshtml" />
+    <Content Include="Views\Post\PostsView.cshtml" />
     <Content Include="Views\Hash\RssReaderListHashtag.cshtml" />
-    <Content Include="Views\Hash\SpecificPostsView.cshtml" />
+    <Content Include="Views\Post\SpecificPostsView.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Twitter\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Project_Readme.html" />

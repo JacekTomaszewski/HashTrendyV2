@@ -132,16 +132,20 @@ namespace WebApiHash.Controllers
                     twitterPost.ContentImageUrl = listTwitterStatus[i].Entities.Media[0].MediaUrl;
                 }
                 //tutaj się wywala - powodem tego jest dodawanie do tabeli po raz drugi hashtaga o takiej samej nazwie. 
-                //Nalezy wyszukać tego hashtaga w bazie danych, a następnie przypisać go do twitterPosta. 
+                //TODO:Nalezy wyszukać tego hashtaga w bazie danych, a następnie przypisać go do twitterPosta. 
                 for (int x = 0; x < listTwitterStatus[i].Entities.HashTags.Count; x++)
                 {
+                    if (hashtag.HashtagName != listTwitterStatus[i].Entities.HashTags[x].Text)
+                    {
                         hashtag.HashtagName = listTwitterStatus[i].Entities.HashTags[x].Text;
                         hashtag.Posts.Add(twitterPost);
                         db.Hashtags.Add(hashtag);
-                        db.SaveChanges();   
+                        db.SaveChanges();
+                    }
+ 
                 }
-                    db.Posts.Add(twitterPost);
-                    db.SaveChanges();
+                db.Posts.Add(twitterPost);
+                db.SaveChanges();
             }
         }
 

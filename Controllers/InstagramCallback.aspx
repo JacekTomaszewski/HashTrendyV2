@@ -20,7 +20,7 @@
 
     </div>
         <p>
-        <asp:Button ID="btn" runat="server" Text="Search for it!" OnClick="btn_Click" />
+        <asp:Button ID="btn" runat="server" Text="Search for it!" OnClick="Btn_Click" />
 
         </p>
         <asp:Image ID="Image1" runat="server" />

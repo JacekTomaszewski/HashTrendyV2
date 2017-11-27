@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApiHash.Context;
+using WebApiHash.Models;
 
 namespace WebApiHash.Controllers
 {
@@ -14,6 +15,7 @@ namespace WebApiHash.Controllers
         {
             return View();
         }
+
         public ActionResult PostsView()
         {
             var Posts = db.Posts.ToList();
@@ -22,19 +24,18 @@ namespace WebApiHash.Controllers
 
         public ActionResult SpecificPostsView(string hashtagname)
         {
-            // var Posts = (from p in db.Hashtags where p.HashtagName == hashtagname select p.Posts);
-            // var Posts = db.Posts.Where(w => w.Hashtags.Any(s => s.HashtagName == hashtagname)).ToList();
-            // var Posts = (from g in db.Posts join m in db.Hashtags on g.PostId equals m.Posts where m.HashtagName == hashtagname select g).ToList();
-            //var Posts = from e in db.Posts.Include("hashta") 
-            //            where e.EmployeeId == someId
-            //            select e;
-            return View();
+            var result = (from m in db.Posts
+                          from b in m.Hashtags
+                          where b.HashtagName.Contains(hashtagname)
+                          select m).ToList();
+            var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
+            result.AddRange(postRss);
+            return View(result);
         }
 
         public ActionResult GetPostsFromTrendsToDb()
         {
             HashController hash = new HashController();
-            System.Net.WebClient client = new System.Net.WebClient();
             DateTime dt1 = DateTime.Now.AddHours(-1.1);
             var result = (from m in db.Trends
                           where m.DateCreated > dt1
@@ -46,5 +47,10 @@ namespace WebApiHash.Controllers
             return View(result);
         }
 
+        public ActionResult Search(string term)
+        {
+            Hashtag hashtag = new Hashtag();
+            return Json(hashtag.HashtagListForAutoComplete(term), JsonRequestBehavior.AllowGet);
+        }
     }
 }

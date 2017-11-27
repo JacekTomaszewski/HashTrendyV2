@@ -39,6 +39,7 @@ namespace WebApiHash.Controllers
                 googlePost.Date = System.DateTime.Parse(post.items[i].published);
                 googlePost.Username = post.items[i].actor.displayName;
                 googlePost.DirectLinkToStatus = post.items[i].url;
+                googlePost.ContentDescription = post.items[i].@object.content;
                 if (post.items[i].@object.attachments != null)
                 {
                     try
@@ -47,35 +48,26 @@ namespace WebApiHash.Controllers
                     }
                     catch { }
                 }
-                tags = Regex.Split(post.items[i].@object.content, @"\s+").Where(b => b.StartsWith("#"));
+                // tags = Regex.Split(post.items[i].@object.content, @"\s+").Where(b => b.StartsWith("#"));
+                tags = Regex.Split(post.items[i].@object.content, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#"));
                 for (int x = 0; x < tags.Count(); x++)
-                    try
+                {
+                    string hashtagnamefor = tags.ElementAt(x);
+                    var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
+                    if (query == null)
                     {
                         hashtag.HashtagName = tags.ElementAt(x);
                         hashtag.Posts.Add(googlePost);
                         db.Hashtags.Add(hashtag);
-                        db.SaveChanges();
                     }
-                    catch (Exception e)
+                    else
                     {
-                        db.Hashtags.Attach(hashtag);
-                        googlePost.Hashtags.Add(hashtag);
+                        googlePost.Hashtags.Add(query);
                     }
-
-                googlePost.ContentDescription = post.items[i].@object.content;
-                try
-                {
+                }
                     db.Posts.Add(googlePost);
                     db.SaveChanges();
-                }
-                catch
-                {
-                    if (db.Posts.Local != null)
-                    {
-                        db.Posts.Local.Clear();
-                    }
                 }
             }
         }
     }
-}

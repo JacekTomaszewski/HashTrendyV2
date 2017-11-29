@@ -1,0 +1,25 @@
+﻿@model List<WebApiHash.Models.Post>
+
+
+@foreach (var item in Model.OrderByDescending(item => item.Date))
+{
+    if (Model != null)
+    {
+        <div class="row">
+            <div class="col-sm-8">
+                <h1><img src="@item.Avatar" /> @item.Username</h1>
+                <h2>  @item.Date</h2>
+
+                <h3>@item.DirectLinkToStatus</h3>
+                <h2><img src="@item.ContentImageUrl" /></h2>
+                <h3>
+                    @Html.Raw(@item.ContentDescription)
+                </h3>
+                <h3> Via:<b> @item.PostSource </b></h3>
+            </div>
+        </div>
+
+    }
+    <hr />
+
+}

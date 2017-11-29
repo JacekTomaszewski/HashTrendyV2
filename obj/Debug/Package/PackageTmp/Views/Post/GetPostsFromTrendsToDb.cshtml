@@ -1,0 +1,13 @@
+﻿@model List<WebApiHash.Models.Trend>
+
+
+@foreach (var item in Model.OrderByDescending(item => item.DateCreated))
+{
+    if (Model != null)
+    {
+        <h1>@item.TrendName</h1>
+        <h2>@item.DateCreated</h2>
+    }
+    <hr />
+
+}

@@ -10,7 +10,6 @@ D:\ProgramowanieGIT\HashTrendyV2\bin\LinqToTwitter.net.dll
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.Identity.Core.dll
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.Owin.dll
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.Owin.Host.SystemWeb.dll
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.Owin.Security.Cookies.dll
@@ -45,7 +44,6 @@ D:\ProgramowanieGIT\HashTrendyV2\bin\Hammock.pdb
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.Identity.Core.xml
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.Owin.xml
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.Owin.Security.xml

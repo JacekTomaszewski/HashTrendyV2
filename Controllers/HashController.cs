@@ -22,9 +22,10 @@ namespace WebApiHash.Controllers
         public void GetHashtagPosts(string hashtagname)
         {
             GooglePlusController googlePlusController = new GooglePlusController();
-            TwitterController twitterController = new TwitterController();
-            twitterController.GetTwitterPosts(hashtagname);
+        //    TwitterController twitterController = new TwitterController();
+            //twitterController.GetTwitterPosts(hashtagname);
             googlePlusController.GetGooglePlusPosts(hashtagname.Replace("#", "%23"));
+            GetRssPosts();
         }
 
         public ActionResult GetHashtagPostsWithView(string hashtagname)
@@ -46,8 +47,7 @@ namespace WebApiHash.Controllers
     //TODO: DUZY PROBLEM Z ZAPISYWANIEM POSTOW DO BAZY DANYCH (!!!)
     //TODO: Logika TwitterTrends - tzn jakie kiedy i dlaczego?
     //TODO: Ujednolicenie bazy danych w tabeli Hashtagi - z '#' czy bez?
-    //TODO: 
-    //TODO: Duplikaty w bazie danych
+    //TODO: Duplikaty w bazie danych w tabeli Posts
     //TODO: Wykop API
     //TODO: Adres localhost w JS przy wyszukiwaniu SpecificPostsView :) - zmienić przy wejściu na serwer
     //TODO: Bootstrap przystosowany do urządzeń mobilnych

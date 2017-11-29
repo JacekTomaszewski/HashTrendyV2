@@ -31,7 +31,7 @@ namespace WebApiHash.Controllers
             GooglePlusPost post = JsonConvert.DeserializeObject<GooglePlusPost>(result);
             Post googlePost = new Post();
             googlePost.PostSource = "Google";
-            Hashtag hashtag = new Hashtag();
+            Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
             IEnumerable<string> tags;
             for (int i = 0; i < post.items.Count; i++)
             {

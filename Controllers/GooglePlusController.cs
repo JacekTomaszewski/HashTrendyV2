@@ -8,7 +8,6 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
-using TweetSharp;
 using WebApiHash.Context;
 using WebApiHash.Models;
 
@@ -16,23 +15,14 @@ namespace WebApiHash.Controllers
 {
     public class GooglePlusController : Controller
     {
-        public void GetGooglePlusPosts(string hashtagname)
+
+        public static void GooglePlusResultDeserializerToDB(GooglePlusPost post)
         {
             HashContext db = new HashContext();
-            string result;
-            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagname + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
-            WebRequest objWebRequest = WebRequest.Create(requestString);
-            WebResponse objWebResponse = objWebRequest.GetResponse();
-            Stream objWebStream = objWebResponse.GetResponseStream();
-            using (StreamReader objStreamReader = new StreamReader(objWebStream))
-            {
-                result = objStreamReader.ReadToEnd();
-            }
-            GooglePlusPost post = JsonConvert.DeserializeObject<GooglePlusPost>(result);
-            Post googlePost = new Post();
-            googlePost.PostSource = "Google";
-            Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
             IEnumerable<string> tags;
+            Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
+            Post googlePost = new Post() { Hashtags = new List<Hashtag>() };
+            googlePost.PostSource = "Google";
             for (int i = 0; i < post.items.Count; i++)
             {
                 googlePost.Avatar = post.items[i].actor.image.url;
@@ -48,7 +38,6 @@ namespace WebApiHash.Controllers
                     }
                     catch { }
                 }
-                // tags = Regex.Split(post.items[i].@object.content, @"\s+").Where(b => b.StartsWith("#"));
                 tags = Regex.Split(post.items[i].@object.content, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#"));
                 for (int x = 0; x < tags.Count(); x++)
                 {
@@ -65,9 +54,11 @@ namespace WebApiHash.Controllers
                         googlePost.Hashtags.Add(query);
                     }
                 }
-                    db.Posts.Add(googlePost);
-                    db.SaveChanges();
-                }
+                db.Posts.Add(googlePost);
+                db.SaveChanges();
             }
+
+        }
+
         }
     }

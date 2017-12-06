@@ -92,7 +92,7 @@ namespace WebApiHash.Controllers
         }
 
 
-        public void RssReadertoDB()
+        public static void RssReadertoDB()
         {
             IEnumerable<Post> WyborczaRssFeeds = GetRssFeedWyborcza();
             for (int i = 0; i < WyborczaRssFeeds.Count(); i++)

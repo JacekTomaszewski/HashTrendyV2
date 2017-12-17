@@ -54,15 +54,17 @@ namespace WebApiHash.Controllers
             }
         }
 
-        public ActionResult RequestView(string hashTagName)
+        public void GetWykopPosts(string hashTagName)
         {
+            string postDescription = "";
+            List<string> ListOfHashtags = new List<string>();
             HashContext db = new HashContext();
+            HttpWebResponse response;
             HttpWebRequest request = WebRequest.CreateHttp("http://a.wykop.pl/tag/index," + hashTagName + "/appkey," + appkey + "/page=1");
             request.Headers.Add("apisign", CreateSign(hashTagName));
             request.Method = WebRequestMethods.Http.Post;
             request.ContentType = "application/json";
             string result = "";
-            HttpWebResponse response;
             try
             {
                 response = (HttpWebResponse)request.GetResponse();
@@ -78,64 +80,23 @@ namespace WebApiHash.Controllers
                     result = response.StatusCode.ToString();
                 }
             }
-            List<Post> abc = new List<Post>();
             WykopDeserializer post = JsonConvert.DeserializeObject<WykopDeserializer>(result);
-            Post wykopPost;
-            Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
-            if (post.items.Count != 0)
-                for (int i = 0; i < post.items.Count; i++)
-                {
-                    wykopPost = new Post() { Hashtags = new List<Hashtag>() };
-                    wykopPost.PostSource = "Wykop";
-                    wykopPost.Avatar = post.items[i].author_avatar;
-                    wykopPost.Date = System.DateTime.Parse(post.items[i].date);
-                    wykopPost.Username = post.items[i].author;
 
-                    if (post.items[i].description != null)
-                    {
-                        wykopPost.ContentDescription = post.items[i].description;
-                        var tags = Regex.Split(post.items[i].description, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#"));
-                        for (int x = 0; x < tags.Count() - 1; x++)
-                        {
-                            string hashtagnamefor = tags.ElementAt(x);
-                            var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
-                            if (query == null)
-                            {
-                                hashtag.HashtagName = tags.ElementAt(x);
-                                hashtag.Posts.Add(wykopPost);
-                                db.Hashtags.Add(hashtag);
-                            }
-                            else
-                            {
-                                wykopPost.Hashtags.Add(query);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        wykopPost.ContentDescription = post.items[i].body;
-                        var tags = Regex.Split(post.items[i].body, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#"));
-                        for (int x = 0; x < tags.Count() - 1; x++)
-                        {
-                            string hashtagnamefor = tags.ElementAt(x);
-                            var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
-                            if (query == null)
-                            {
-                                hashtag.HashtagName = tags.ElementAt(x);
-                                hashtag.Posts.Add(wykopPost);
-                                db.Hashtags.Add(hashtag);
-                            }
-                            else
-                            {
-                                wykopPost.Hashtags.Add(query);
-                            }
-                        }
-                    }
-                    db.Posts.Add(wykopPost);
-                    db.SaveChanges();
-                    abc.Add(wykopPost);
-                }
-            return View(abc.ToList());
+            for (int i = 0; i < post.items.Count; i++)
+            {
+
+                if (post.items[i].description != null)
+                    postDescription = post.items[i].description;
+                else
+                    postDescription = post.items[i].body;
+
+                    ListOfHashtags = Regex.Split(postDescription, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#")).ToList();
+
+                PostController.DeserializertoDB("Wykop", post.items[i].author_avatar, System.DateTime.Parse(post.items[i].date),
+                    post.items[i].author,postDescription , "ImageURL" ,
+                    "Post URL", ListOfHashtags);
+            };
+
         }
     }
 }

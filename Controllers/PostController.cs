@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using WebApiHash.Context;
@@ -36,7 +37,7 @@ namespace WebApiHash.Controllers
             result.AddRange(postRss);
 
             var postSources = db.Posts.Where(p => p.PostSource != null).Select(p => p.PostSource).Distinct().ToList();
-            ViewBag.data= postSources.ToArray();
+            ViewBag.data = postSources.ToArray();
             return View(result);
         }
 
@@ -63,53 +64,48 @@ namespace WebApiHash.Controllers
 
         public ActionResult GetPostsFromSocialMedia(string hashtagname)
         {
-            #region Twitter
-            TwitterContext twitterCtx = new TwitterContext(TwitterController.auth);
-            var searchResponse =
-                (from search in twitterCtx.Search
-                 where search.Type == SearchType.Search &&
-                       search.Query == hashtagname &&
-                       search.ResultType == ResultType.Recent &&
-                       search.TweetMode == TweetMode.Extended &&
-                       search.Count == 100
-                 select search).ToList();
-            List<Post> ListOfPosts = new List<Post>();
-            for(int i = 0; i < searchResponse.Count; i++)
-            { 
-            Post TempPost = new Post()
-            {
-                Avatar = searchResponse[0].Statuses[i].User.ProfileImageUrl,
-                PostSource = "Twitter",
-                Date = searchResponse[0].Statuses[i].CreatedAt,
-                Username = searchResponse[0].Statuses[i].User.Name,
-                ContentDescription = searchResponse[0].Statuses[i].FullText
-            };
-                ListOfPosts.Add(post);
-            }
-
-            TwitterController.TwitterDeserializertoDB(searchResponse);
-
-            #endregion
-            #region GooglePlus
-            string result;
-            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagname + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
-            WebRequest objWebRequest = WebRequest.Create(requestString);
-            WebResponse objWebResponse = objWebRequest.GetResponse();
-            Stream objWebStream = objWebResponse.GetResponseStream();
-            using (StreamReader objStreamReader = new StreamReader(objWebStream))
-            {
-                result = objStreamReader.ReadToEnd();
-            }
-            GooglePlusPost post = JsonConvert.DeserializeObject<GooglePlusPost>(result);
-
-            GooglePlusController.GooglePlusResultDeserializerToDB(post);
-            #endregion
-            #region Rss
-            RssController.RssReadertoDB();
-            #endregion
-
+            GooglePlusController.GetGooglePlusPosts(hashtagname);
+            TwitterController.GetTwitterPosts(hashtagname); 
+            
             return Redirect("http://localhost:50707/post/SpecificPostsView?hashtagname=" + hashtagname);
         }
+
+        public static void DeserializertoDB(string PostSource, string Avatar, DateTime Date, string Username,
+           string ContentDescription, string ContentImageUrl, string UrlAddress, List<string> listOfHashtags)
+        {
+            HashContext db = new HashContext();
+            Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
+            Post post = new Post() { Hashtags = new List<Hashtag>() };
+
+            post.PostSource = PostSource;
+            post.Avatar = Avatar;
+            post.Date = Date;
+            post.Username = Username;
+            post.ContentDescription = ContentDescription;
+            if (ContentImageUrl != "")
+            {
+                post.ContentImageUrl = ContentImageUrl;
+            }
+
+            for (int x = 0; x < listOfHashtags.Count; x++)
+            {
+                string hashtagnamefor = listOfHashtags.ElementAt(x);
+                var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
+                if (query == null)
+                {
+                    hashtag.HashtagName = hashtagnamefor;
+                    hashtag.Posts.Add(post);
+                    db.Hashtags.Add(hashtag);
+                }
+                else
+                {
+                    post.Hashtags.Add(query);
+                }
+            }
+            db.Posts.Add(post);
+            db.SaveChanges();
+        }
+
 
     }
 }

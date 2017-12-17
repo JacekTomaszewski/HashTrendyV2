@@ -313,6 +313,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\hashtrend.hostingasp.pl - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\hashtrendy.hostingasp.pl - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

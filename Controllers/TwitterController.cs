@@ -81,7 +81,6 @@ namespace WebApiHash.Controllers
 
        public static void GetTwitterPosts(string hashtagname)
         {
-
             TwitterContext twitterCtx = new TwitterContext(TwitterController.auth);
             var searchResponse =
                 (from search in twitterCtx.Search
@@ -91,9 +90,10 @@ namespace WebApiHash.Controllers
                        search.TweetMode == TweetMode.Extended &&
                        search.Count == 100
                  select search).ToList();
+
             List<string> ListOfHashtags = new List<string>();
 
-            for (int i = 0; i < searchResponse.Count; i++)
+            for (int i = 0; i < searchResponse[0].Count; i++)
             {
                 for (int x = 0; x < searchResponse[0].Statuses[i].Entities.HashTagEntities.Count; x++)
                     ListOfHashtags.Add(searchResponse[0].Statuses[i].Entities.HashTagEntities[x].Tag);
@@ -101,13 +101,10 @@ namespace WebApiHash.Controllers
                 PostController.DeserializertoDB("Twitter", searchResponse[0].Statuses[i].User.ProfileImageUrl, searchResponse[0].Statuses[i].CreatedAt,
                     searchResponse[0].Statuses[i].User.Name, searchResponse[0].Statuses[i].FullText,
                     searchResponse[0].Statuses[i].Entities.MediaEntities.Count > 0 ?
-                searchResponse[0].Statuses[i].Entities.MediaEntities[0].MediaUrl : "", ListOfHashtags);
+                searchResponse[0].Statuses[i].Entities.MediaEntities[0].MediaUrl : "", "https://twitter.com/statuses/"+searchResponse[0].Statuses[i].StatusID, ListOfHashtags);
             };
-
-
         }
 
     }
 
     }
-}

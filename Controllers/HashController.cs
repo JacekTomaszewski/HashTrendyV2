@@ -13,7 +13,6 @@ namespace WebApiHash.Controllers
 
     }
 }
-    //TODO: DUZY PROBLEM Z ZAPISYWANIEM POSTOW DO BAZY DANYCH (!!!)
     //TODO: Logika TwitterTrends - tzn jakie kiedy i dlaczego?
     //TODO: Ujednolicenie bazy danych w tabeli Hashtagi - z '#' czy bez?
     //TODO: Duplikaty w bazie danych w tabeli Posts

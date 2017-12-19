@@ -24,6 +24,7 @@ namespace WebApiHash.Controllers
         HashContext db = new HashContext();
         public ActionResult Index()
         {
+
             return View();
         }
         public ActionResult TwitterTrends()

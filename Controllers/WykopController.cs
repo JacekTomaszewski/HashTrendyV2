@@ -16,8 +16,8 @@ namespace WebApiHash.Controllers
 {
     public class WykopController : Controller
     {
-        private string appkey = "0In5DAkznE";
-        private string secret = "gtiMvSQTP2";
+        private static string appkey = "0In5DAkznE";
+        private static string secret = "gtiMvSQTP2";
 
 
         // GET: Wykop
@@ -44,7 +44,7 @@ namespace WebApiHash.Controllers
             return sBuilder.ToString();
         }
 
-        private string CreateSign(string hashTagName)
+        private static string CreateSign(string hashTagName)
         {
             using (MD5 md5Hash = MD5.Create())
             {
@@ -54,7 +54,7 @@ namespace WebApiHash.Controllers
             }
         }
 
-        public void GetWykopPosts(string hashTagName)
+        public static void GetWykopPosts(string hashTagName)
         {
             string postDescription = "";
             List<string> ListOfHashtags = new List<string>();

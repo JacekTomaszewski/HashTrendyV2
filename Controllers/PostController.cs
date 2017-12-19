@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using WebApiHash.Context;
@@ -15,7 +16,7 @@ namespace WebApiHash.Controllers
 {
     public class PostController : Controller
     {
-        HashContext db = new HashContext();
+        static HashContext db = new HashContext();
         public ActionResult Index()
         {
             return View();
@@ -25,6 +26,16 @@ namespace WebApiHash.Controllers
         {
             var Posts = db.Posts.ToList();
             return View(Posts);
+        }
+
+       public ActionResult AsyncUpdateDB()
+        {
+            GetPostsFromTrendsToDb();
+            //Thread thr = new Thread(() => GetPostsFromTrendsToDb());
+          //  thr.Start();
+            //Thread.Sleep(3600000);
+          
+            return View(PostsView());
         }
 
         public ActionResult SpecificPostsView(string hashtagname)
@@ -41,7 +52,7 @@ namespace WebApiHash.Controllers
             return View(result);
         }
 
-        public ActionResult GetPostsFromTrendsToDb()
+        public static void GetPostsFromTrendsToDb()
         {
             HashController hash = new HashController();
             DateTime dt1 = DateTime.Now.AddHours(-1.1);
@@ -52,7 +63,6 @@ namespace WebApiHash.Controllers
             {
                 GetPostsFromSocialMedia(result.ElementAt(i).TrendName);
             }
-            return View(result);
         }
 
         public ActionResult Search(string term)
@@ -62,12 +72,19 @@ namespace WebApiHash.Controllers
         }
 
 
-        public ActionResult GetPostsFromSocialMedia(string hashtagname)
+        public static void GetPostsFromSocialMedia(string hashtagname)
         {
+            TwitterController.GetTwitterPosts(hashtagname);
             GooglePlusController.GetGooglePlusPosts(hashtagname);
-            TwitterController.GetTwitterPosts(hashtagname); 
-            
-            return Redirect("http://localhost:50707/post/SpecificPostsView?hashtagname=" + hashtagname);
+            WykopController.GetWykopPosts(hashtagname);
+            //Thread thr = new Thread(()=>TwitterController.GetTwitterPosts(hashtagname));
+            //Thread thr2 = new Thread(() => GooglePlusController.GetGooglePlusPosts(hashtagname));
+            // Thread thr3 = new Thread(() => WykopController.GetWykopPosts(hashtagname));
+            // thr.Start();
+            //System.Diagnostics.Debug.WriteLine("Jestem wątkiem"+thr.Name);
+            //  thr2.Start();
+            //thr3.Start();
+            //System.Diagnostics.Debug.WriteLine("Jestem wątkiem" + thr3.Name);
         }
 
         public static void DeserializertoDB(string PostSource, string Avatar, DateTime Date, string Username,
@@ -90,6 +107,10 @@ namespace WebApiHash.Controllers
             for (int x = 0; x < listOfHashtags.Count; x++)
             {
                 string hashtagnamefor = listOfHashtags.ElementAt(x);
+                if (hashtagnamefor.Substring(0, 1) == "#")
+                {
+                    hashtagnamefor.Remove(0, 1);
+                }
                 var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
                 if (query == null)
                 {
@@ -105,6 +126,7 @@ namespace WebApiHash.Controllers
             db.Posts.Add(post);
             db.SaveChanges();
         }
+
 
 
     }

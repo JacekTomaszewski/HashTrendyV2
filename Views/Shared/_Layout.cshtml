@@ -19,11 +19,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Table Imei", "Index", "Imei")</li>
-                    <li>@Html.ActionLink("Twitter Trends", "TwitterTrends", "Twitter")</li>
-                    <li>@Html.ActionLink("View all posts from db", "PostsView", "Post")</li>
-                    <li>@Html.ActionLink("Specific Posts View", "SpecificPostsView", "Post")</li>
-                    <li>@Html.ActionLink("View RSS", "RssReaderListHashtag", "Rss")</li>
+                    <li>@Html.ActionLink("Popular Trends", "TwitterTrends", "Twitter")</li>
+                    <li>@Html.ActionLink("All posts", "PostsView", "Post")</li>
+                    <li>@Html.ActionLink("Search post by #", "SpecificPostsView", "Post")</li>
                     <li>@Html.ActionLink("Start Async", "AsyncUpdateDB", "Post")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")

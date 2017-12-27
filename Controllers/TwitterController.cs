@@ -11,6 +11,7 @@ namespace WebApiHash.Controllers
 {
     public class TwitterController : Controller
     {
+       static HashContext db = new HashContext();
         public static SingleUserAuthorizer auth = new SingleUserAuthorizer
         {
             CredentialStore = new SingleUserInMemoryCredentialStore
@@ -21,13 +22,23 @@ namespace WebApiHash.Controllers
                 AccessTokenSecret = "hbOXipioFNcyOUyWbGdVAXvoVquETMl57AZUTcbMh3WRv"
             }
         };
-        HashContext db = new HashContext();
+
         public ActionResult Index()
         {
 
             return View();
         }
         public ActionResult TwitterTrends()
+        {
+            DateTime now = DateTime.Now.AddHours(-1.1);
+            var result = (from m in db.Trends
+                                      where m.DateCreated > now
+                                      select m).ToList();
+            return View(result);
+        }
+
+
+        public static void TwitterTrendstoDB()
         {
             Models.Trend trendModel = new Models.Trend();
             TwitterContext twitterctx = new TwitterContext(auth);
@@ -40,18 +51,15 @@ namespace WebApiHash.Controllers
                 trends.Any() &&
                 trends.First().Locations != null
                 )
-            {
-                ViewData["Lokacja"] = "Trendy wyszukiwane dla: " + trends.First().Locations.First().Name;
-            }
             for (int i = 0; i < trends.Count; i++)
             {
-                trendModel.TrendName = trends.ElementAt(i).Name;
+                trendModel.TrendName = PostController.RemoveDiacricts(trends.ElementAt(i).Name);
                 trendModel.DateCreated = DateTime.Now;
                 db.Trends.Add(trendModel);
                 db.SaveChanges();
             }
-            return View(trends.ToList());
         }
+
 
         public ActionResult TwitterAuth()
         {
@@ -89,12 +97,12 @@ namespace WebApiHash.Controllers
                        search.Query == hashtagname &&
                        search.ResultType == ResultType.Recent &&
                        search.TweetMode == TweetMode.Extended &&
-                       search.Count == 100
+                       search.Count == 20
                  select search).ToList();
 
             List<string> ListOfHashtags = new List<string>();
 
-            for (int i = 0; i < searchResponse[0].Count; i++)
+            for (int i = 0; i < searchResponse[0].Statuses.Count; i++)
             {
                 for (int x = 0; x < searchResponse[0].Statuses[i].Entities.HashTagEntities.Count; x++)
                     ListOfHashtags.Add(searchResponse[0].Statuses[i].Entities.HashTagEntities[x].Tag);

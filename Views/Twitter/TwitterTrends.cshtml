@@ -1,10 +1,7 @@
-﻿@model List<LinqToTwitter.Trend>
+﻿@model List<WebApiHash.Models.Trend>
 
 
 
     <h1><b>@ViewData["Lokacja"]</b></h1><br />
 @foreach (var item in Model)
-{<a href="/post/SpecificPostsView?hashtagname=@item.Name.Replace("#","%23")">@item.Name</a><br />}
-
-
-
+{<a href="/post/SpecificPostsView?hashtagname=@item.TrendName.Replace("#","%23")">@item.TrendName</a><br />}

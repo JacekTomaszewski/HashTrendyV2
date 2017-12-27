@@ -44,24 +44,25 @@ namespace WebApiHash.Controllers
             return sBuilder.ToString();
         }
 
-        private static string CreateSign(string hashTagName)
+        private static string CreateSign(string hashtagname)
         {
             using (MD5 md5Hash = MD5.Create())
             {
-                string textToHash = secret + "http://a.wykop.pl/tag/index," + hashTagName + "/appkey," + appkey + "/page=1"; //json
+                string textToHash = secret + "http://a.wykop.pl/tag/index," + hashtagname + "/appkey," + appkey + "/page=1"; //json
                 string hash = GetMd5Hash(md5Hash, textToHash);
                 return hash;
             }
         }
 
-        public static void GetWykopPosts(string hashTagName)
+        public static void GetWykopPosts(string hashtagname)
         {
             string postDescription = "";
+            hashtagname=hashtagname[0]=='#' ? hashtagname.Remove(0, 1) : hashtagname;
             List<string> ListOfHashtags = new List<string>();
             HashContext db = new HashContext();
             HttpWebResponse response;
-            HttpWebRequest request = WebRequest.CreateHttp("http://a.wykop.pl/tag/index," + hashTagName + "/appkey," + appkey + "/page=1");
-            request.Headers.Add("apisign", CreateSign(hashTagName));
+            HttpWebRequest request = WebRequest.CreateHttp("http://a.wykop.pl/tag/index," + hashtagname + "/appkey," + appkey + "/page=1");
+            request.Headers.Add("apisign", CreateSign(hashtagname));
             request.Method = WebRequestMethods.Http.Post;
             request.ContentType = "application/json";
             string result = "";
@@ -93,8 +94,8 @@ namespace WebApiHash.Controllers
                     ListOfHashtags = Regex.Split(postDescription, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#")).ToList();
 
                 PostController.DeserializertoDB("Wykop", post.items[i].author_avatar, System.DateTime.Parse(post.items[i].date),
-                    post.items[i].author,postDescription , "ImageURL" ,
-                    "Post URL", ListOfHashtags);
+                    post.items[i].author,postDescription , "",
+                    post.items[i].url, ListOfHashtags);
             };
 
         }

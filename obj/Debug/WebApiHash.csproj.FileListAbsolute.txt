@@ -539,3 +539,7 @@ D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-ma
 D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.CoreCompileInputs.cache
 D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.dll
 D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.pdb
+D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.SystemWeb.xml

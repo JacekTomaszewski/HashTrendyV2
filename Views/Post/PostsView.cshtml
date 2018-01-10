@@ -16,7 +16,7 @@ $("#hashtag").autocomplete({
         function openurl()
         {
             var url = document.getElementById('hashtag').value;
-            window.location.replace("http://localhost:50707/post/specificpostsview?hashtagname=" + url);
+            window.location.replace("/post/specificpostsview?hashtagname=" + url);
         }
     </script>
     @foreach (var item in Model.OrderByDescending(item => item.Date))

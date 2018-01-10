@@ -19,7 +19,7 @@ namespace WebApiHash.Controllers
         public static void GetGooglePlusPosts(string hashtagname)
         {
             string result;
-            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" +     hashtagname.Replace("#", "%23") + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
+            string requestString = "https://www.googleapis.com/plus/v1/activities?query=" + hashtagname + "&key=AIzaSyCXR0gFpvOpB0QmZs7qxHB7waGBFywchdA" + "&maxResults=20";
             WebRequest objWebRequest = WebRequest.Create(requestString);
             WebResponse objWebResponse = objWebRequest.GetResponse();
             Stream objWebStream = objWebResponse.GetResponseStream();
@@ -33,8 +33,8 @@ namespace WebApiHash.Controllers
             {
                 PostController.DeserializertoDB("Google Plus", jsonResult.items[i].actor.image.url, System.DateTime.Parse(jsonResult.items[i].published),
                    jsonResult.items[i].actor.displayName, jsonResult.items[i].@object.content,
-                   jsonResult.items[i].@object.attachments != null ? jsonResult.items[i].@object.attachments[0].image!=null ? jsonResult.items[i].@object.attachments[0].image.url
-                   : null :null, jsonResult.items[i].@object.url, Regex.Split(jsonResult.items[i].@object.content, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#")).ToList());
+                   jsonResult.items[i].@object.attachments[0].image.url != null ? jsonResult.items[i].@object.attachments[0].image.url
+                   : null, jsonResult.items[i].@object.url, Regex.Split(jsonResult.items[i].@object.content, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#")).ToList());
             }
         }
 

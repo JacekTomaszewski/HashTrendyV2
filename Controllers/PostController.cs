@@ -11,45 +11,91 @@ using System.Web;
 using System.Web.Mvc;
 using WebApiHash.Context;
 using WebApiHash.Models;
+using static WebApiHash.Models.Post;
 
 namespace WebApiHash.Controllers
 {
     public class PostController : Controller
     {
-       static HashContext db = new HashContext();
+        static HashContext db = new HashContext();
+        PostRepository messageRepository = new PostRepository();
+        public static class DataManager
+        {
+
+            public static List<Post> GetPosts(int BlockNumber, int BlockSize)
+            {
+
+                int startIndex = (BlockNumber - 1) * BlockSize;
+                var posts = (from p in db.Posts
+                             orderby p.Date descending
+                             select p).Skip(startIndex).Take(BlockSize).ToList();
+
+                return posts;
+            }
+        }
         public ActionResult Index()
         {
             return View();
         }
-
+        [OutputCache(Duration = 0)]
+        public ActionResult GetMessages()
+        {
+            
+            return PartialView("PostList", messageRepository.GetAllMessages());
+        }
+        [ChildActionOnly]
+        public ActionResult PostList(List<Post> Model)
+        {
+            return PartialView(Model);
+        }
         public ActionResult PostsView()
         {
-            var Posts = db.Posts.ToList();
-            return View(Posts);
+           
+            int BlockSize = 10;
+            var posts = DataManager.GetPosts(1, BlockSize);
+            return View(posts);
         }
 
+        [HttpPost]
+        public ActionResult InfinateScroll(int BlockNumber)
+        {
+           
+            int BlockSize = 10;
+            var posts = DataManager.GetPosts(BlockNumber, BlockSize);
+
+            JsonModel jsonModel = new JsonModel();
+            jsonModel.NoMoreData = posts.Count < BlockSize;
+            jsonModel.HTMLString = RenderPartialViewToString("PostList", posts);
+            return Json(jsonModel);
+        }
+        protected string RenderPartialViewToString(string viewName, object model)
+        {
+            if (string.IsNullOrEmpty(viewName))
+                viewName = ControllerContext.RouteData.GetRequiredString("action");
+
+            ViewData.Model = model;
+
+            using (StringWriter sw = new StringWriter())
+            {
+                ViewEngineResult viewResult = ViewEngines.Engines.FindPartialView(ControllerContext, viewName);
+                ViewContext viewContext = new ViewContext(ControllerContext, viewResult.View, ViewData, TempData, sw);
+                viewResult.View.Render(viewContext, sw);
+
+                return sw.GetStringBuilder().ToString();
+            }
+        }
         public ActionResult AsyncUpdateDB()
         {
-
-            while (true)
-            {
-               //TwitterController.TwitterTrendstoDB();
-                GetPostsFromTrendsToDb();
-                Thread.Sleep(3600000);
-            }
-
-            return RedirectToAction("SpecificPostsView", "Post");
+            GetPostsFromTrendsToDb();
+            //Thread thr = new Thread(() => GetPostsFromTrendsToDb());
+          //  thr.Start();
+            //Thread.Sleep(3600000);
+          
+            return View(PostsView());
         }
 
-        public static string RemoveDiacricts(string txt)
-        {
-            byte[] bytes = System.Text.Encoding.GetEncoding("Cyrillic").GetBytes(txt);
-            return System.Text.Encoding.ASCII.GetString(bytes);
-        }
         public ActionResult SpecificPostsView(string hashtagname)
         {
-            if (hashtagname != null)
-                GetPostsFromSocialMedia(hashtagname);
             var result = (from m in db.Posts
                           from b in m.Hashtags
                           where b.HashtagName.Contains(hashtagname)
@@ -69,13 +115,9 @@ namespace WebApiHash.Controllers
             var result = (from m in db.Trends
                           where m.DateCreated > dt1
                           select m).ToList();
-
-
-            for (int i = 0; i < result.Count - 1; i++)
+            for (int i = 0; i < result.Count; i++)
             {
-                Thread thr = new Thread(() => GetPostsFromSocialMedia(result.ElementAt(i).TrendName));
-                Thread.Sleep(120);
-                thr.Start();
+                GetPostsFromSocialMedia(result.ElementAt(i).TrendName);
             }
         }
 
@@ -84,71 +126,71 @@ namespace WebApiHash.Controllers
             Hashtag hashtag = new Hashtag();
             return Json(hashtag.HashtagListForAutoComplete(term), JsonRequestBehavior.AllowGet);
         }
+        public ActionResult RefreshPage(string name)
+        {
+            Post post = new Post();
+            string json = JsonConvert.SerializeObject(post.RefreshPost(name));
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+
 
 
         public static void GetPostsFromSocialMedia(string hashtagname)
         {
-
-            hashtagname = RemoveDiacricts(hashtagname);
-            Thread thr = new Thread(() => TwitterController.GetTwitterPosts(hashtagname));
-            Thread thr2 = new Thread(() => GooglePlusController.GetGooglePlusPosts(hashtagname));
-            Thread thr3 = new Thread(() => WykopController.GetWykopPosts(hashtagname));
-            thr.Start();
-            Thread.Sleep(100);
-            thr2.Start();
-            Thread.Sleep(100);
-            thr3.Start();
-            Thread.Sleep(100);
-           
+            TwitterController.GetTwitterPosts(hashtagname);
+            GooglePlusController.GetGooglePlusPosts(hashtagname);
+            WykopController.GetWykopPosts(hashtagname);
+            //Thread thr = new Thread(()=>TwitterController.GetTwitterPosts(hashtagname));
+            //Thread thr2 = new Thread(() => GooglePlusController.GetGooglePlusPosts(hashtagname));
+            // Thread thr3 = new Thread(() => WykopController.GetWykopPosts(hashtagname));
+            // thr.Start();
+            //System.Diagnostics.Debug.WriteLine("Jestem wątkiem"+thr.Name);
+            //  thr2.Start();
+            //thr3.Start();
+            //System.Diagnostics.Debug.WriteLine("Jestem wątkiem" + thr3.Name);
         }
 
         public static void DeserializertoDB(string PostSource, string Avatar, DateTime Date, string Username,
            string ContentDescription, string ContentImageUrl, string UrlAddress, List<string> listOfHashtags)
         {
-
+            HashContext db = new HashContext();
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
             Post post = new Post() { Hashtags = new List<Hashtag>() };
-            using (var db1 = new HashContext())
-            { 
-                post.PostSource = PostSource;
-                post.Avatar = Avatar;
-                post.Date = Date;
-                post.Username = Username;
-                post.ContentDescription = ContentDescription;
-                if (ContentImageUrl != "")
-                {
-                    post.ContentImageUrl = ContentImageUrl;
-                }
+
+            post.PostSource = PostSource;
+            post.Avatar = Avatar;
+            post.Date = Date;
+            post.Username = Username;
+            post.ContentDescription = ContentDescription;
+            if (ContentImageUrl != "")
+            {
+                post.ContentImageUrl = ContentImageUrl;
+            }
 
             for (int x = 0; x < listOfHashtags.Count; x++)
             {
-                string hashtagnamefor = RemoveDiacricts(listOfHashtags.ElementAt(x));
+                string hashtagnamefor = listOfHashtags.ElementAt(x);
                 if (hashtagnamefor.Substring(0, 1) == "#")
                 {
-                    hashtagnamefor = hashtagnamefor.Remove(0, 1);
+                    hashtagnamefor.Remove(0, 1);
                 }
-
-                var query = (from z in db1.Hashtags where z.HashtagName == hashtagnamefor select z).FirstOrDefault();
+                var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
                 if (query == null)
                 {
                     hashtag.HashtagName = hashtagnamefor;
                     hashtag.Posts.Add(post);
-                    db1.Hashtags.Add(hashtag);
+                    db.Hashtags.Add(hashtag);
                 }
                 else
                 {
                     post.Hashtags.Add(query);
                 }
-                db1.Posts.Add(post);
-                    try
-                    {
-                        db1.SaveChanges();
-                    }
-                    catch { }
             }
-            }
+            db.Posts.Add(post);
+            db.SaveChanges();
         }
+
+
+
     }
 }
-
-      

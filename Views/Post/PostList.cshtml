@@ -1,0 +1,21 @@
+﻿@model List<WebApiHash.Models.Post>
+@foreach (var item in Model)
+{
+    if (Model != null)
+    {
+        <h1><img src="@item.Avatar" /> @item.Username</h1>
+        <h5>  @item.Date</h5>
+            <a href="@item.DirectLinkToStatus">Przejdź do strony</a>
+            <br />
+            <h3>@item.DirectLinkToStatus</h3>
+            <h2><img src="@item.ContentImageUrl" class="img-responsive" /></h2>
+            <h3>
+                <span style="width:100%;word-wrap:break-word;display:inline-block;">
+                    @Html.Raw(@item.ContentDescription)
+                </span>
+            </h3>
+            <h3> Via:<b> @item.PostSource </b></h3>
+    }
+    <hr />
+
+}

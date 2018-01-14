@@ -4,7 +4,7 @@
 
     <h1><b>@ViewData["Lokacja"]</b></h1><br />
 @foreach (var item in Model)
-{<a href="/post/SpecificPostsView?hashtagname=@item.Name.Replace("#","%23")">@item.Name</a><br />}
+{<a href="/Hash/GetPostsFromSocialMedia?hashtagname=@item.Name.Replace("#","%23")">@item.Name</a><br />}
 
 
 

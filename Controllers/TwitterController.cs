@@ -22,6 +22,7 @@ namespace WebApiHash.Controllers
             }
         };
         HashContext db = new HashContext();
+
         public ActionResult Index()
         {
 
@@ -36,6 +37,7 @@ namespace WebApiHash.Controllers
                                 && trend.WoeID == 23424923
                                 && trend.SearchUrl.Substring(28, 3).Equals("%23")
                           select trend).ToList();
+
             if (trends != null &&
                 trends.Any() &&
                 trends.First().Locations != null

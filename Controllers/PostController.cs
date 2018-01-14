@@ -18,77 +18,27 @@ namespace WebApiHash.Controllers
     public class PostController : Controller
     {
         static HashContext db = new HashContext();
-        PostRepository messageRepository = new PostRepository();
-        public static class DataManager
-        {
 
-            public static List<Post> GetPosts(int BlockNumber, int BlockSize)
-            {
-
-                int startIndex = (BlockNumber - 1) * BlockSize;
-                var posts = (from p in db.Posts
-                             orderby p.Date descending
-                             select p).Skip(startIndex).Take(BlockSize).ToList();
-
-                return posts;
-            }
-        }
         public ActionResult Index()
         {
             return View();
         }
-        [OutputCache(Duration = 0)]
-        public ActionResult GetMessages()
+        public ActionResult GetMessages(string hashtagname)
         {
-            
-            return PartialView("PostList", messageRepository.GetAllMessages());
+            var messageRepository = new PostRepository();
+            return PartialView("_Partial", messageRepository.GetAllMessages(hashtagname));
         }
-        [ChildActionOnly]
-        public ActionResult PostList(List<Post> Model)
-        {
-            return PartialView(Model);
-        }
+
         public ActionResult PostsView()
         {
-           
-            int BlockSize = 10;
-            var posts = DataManager.GetPosts(1, BlockSize);
-            return View(posts);
+            return View();
         }
 
-        [HttpPost]
-        public ActionResult InfinateScroll(int BlockNumber)
-        {
-           
-            int BlockSize = 10;
-            var posts = DataManager.GetPosts(BlockNumber, BlockSize);
-
-            JsonModel jsonModel = new JsonModel();
-            jsonModel.NoMoreData = posts.Count < BlockSize;
-            jsonModel.HTMLString = RenderPartialViewToString("PostList", posts);
-            return Json(jsonModel);
-        }
-        protected string RenderPartialViewToString(string viewName, object model)
-        {
-            if (string.IsNullOrEmpty(viewName))
-                viewName = ControllerContext.RouteData.GetRequiredString("action");
-
-            ViewData.Model = model;
-
-            using (StringWriter sw = new StringWriter())
-            {
-                ViewEngineResult viewResult = ViewEngines.Engines.FindPartialView(ControllerContext, viewName);
-                ViewContext viewContext = new ViewContext(ControllerContext, viewResult.View, ViewData, TempData, sw);
-                viewResult.View.Render(viewContext, sw);
-
-                return sw.GetStringBuilder().ToString();
-            }
-        }
         public ActionResult AsyncUpdateDB()
         {
             GetPostsFromTrendsToDb();
             //Thread thr = new Thread(() => GetPostsFromTrendsToDb());
-          //  thr.Start();
+          // thr.Start();
             //Thread.Sleep(3600000);
           
             return View(PostsView());
@@ -96,16 +46,17 @@ namespace WebApiHash.Controllers
 
         public ActionResult SpecificPostsView(string hashtagname)
         {
-            var result = (from m in db.Posts
-                          from b in m.Hashtags
-                          where b.HashtagName.Contains(hashtagname)
-                          select m).ToList();
-            var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
-            result.AddRange(postRss);
+            //var result = (from m in db.Posts
+            //              from b in m.Hashtags
+            //              where b.HashtagName.Contains(hashtagname)
+            //              select m).ToList();
+            //var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
+            //result.AddRange(postRss);
 
-            var postSources = db.Posts.Where(p => p.PostSource != null).Select(p => p.PostSource).Distinct().ToList();
-            ViewBag.data = postSources.ToArray();
-            return View(result);
+            //var postSources = db.Posts.Where(p => p.PostSource != null).Select(p => p.PostSource).Distinct().ToList();
+            //ViewBag.data = postSources.ToArray();
+            //  return View(result);
+            return View();
         }
 
         public static void GetPostsFromTrendsToDb()

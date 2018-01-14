@@ -325,10 +325,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\hashtrend.hostingasp.pl - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\hashtrendy.hostingasp.pl - Web Deploy.pubxml" />
-    <Content Include="Images\ajax-loader.gif" />
-    <Content Include="Images\RMF.jpg" />
-    <Content Include="Images\TVN.jpg" />
-    <Content Include="Images\Wyborcza.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -387,7 +383,6 @@
     <Content Include="Views\Post\GetPostsFromTrendsToDb.cshtml" />
     <Content Include="Views\Wykop\RequestView.cshtml" />
     <Content Include="Views\Post\_Partial.cshtml" />
-    <Content Include="Views\Post\PostList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

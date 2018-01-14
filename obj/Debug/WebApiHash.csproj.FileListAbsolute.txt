@@ -269,277 +269,283 @@ C:\Users\Kamil\Downloads\hashtrendyv2333-master\HashTrendyV2-master\HashTrendyV2
 C:\Users\Kamil\Downloads\hashtrendyv2333-master\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\Kamil\Downloads\hashtrendyv2333-master\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\Kamil\Downloads\hashtrendyv2333-master\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll.config
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.pdb
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Web.Infrastructure.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Owin.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebGrease.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.pdb
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.pdb
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.xml
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.pdb
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.InitialCreate.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.AddedUniqueColumnsAndImeiMaxLength.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.addedmigrations.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource1.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource2.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja2.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja3.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja4.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja5.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.migr1.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.abc.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.elo.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.mig2.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._1211.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._133.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.aa1.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.GenerateResource.Cache
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.dll
-D:\Torrenty\The Woman in Black 2 Angel of Death (2014)\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.pdb
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll.config
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.pdb
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Owin.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebGrease.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.pdb
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.pdb
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.xml
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.pdb
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.InitialCreate.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.AddedUniqueColumnsAndImeiMaxLength.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.addedmigrations.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource1.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource2.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja2.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja3.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja4.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja5.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.migr1.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.abc.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.elo.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.mig2.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._1211.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._133.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.aa1.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.GenerateResource.Cache
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.dll
-C:\Users\Kamil\Downloads\hashtrendyvdamiana\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.pdb
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll.config
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.pdb
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Web.Infrastructure.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Owin.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebGrease.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.pdb
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.pdb
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.xml
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.pdb
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.InitialCreate.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.AddedUniqueColumnsAndImeiMaxLength.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.addedmigrations.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource1.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource2.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja2.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja3.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja4.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja5.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.migr1.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.abc.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.elo.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.mig2.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._1211.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._133.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.aa1.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.GenerateResource.Cache
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.CoreCompileInputs.cache
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.dll
-D:\Najnowsze\hashtrendyv2_Dzialajacy_SCROLL_NIE_DZIALA_SIGNAL\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.pdb
-D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.Core.dll
-D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.Core.xml
-D:\ProgramowanieGIT\HashTrendyV2\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll.config
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.pdb
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Owin.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\WebGrease.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.pdb
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.pdb
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.xml
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.pdb
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.InitialCreate.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.AddedUniqueColumnsAndImeiMaxLength.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.addedmigrations.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource1.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource2.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja2.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja3.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja4.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja5.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.migr1.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.abc.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.elo.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.mig2.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._1211.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._133.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.aa1.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.GenerateResource.Cache
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.dll
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.pdb
+C:\Users\Kamil\Downloads\hashtrendyv2333-masterfdawfva\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll.config
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\WebApiHash.pdb
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Web.Infrastructure.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Owin.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\WebGrease.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Antlr3.Runtime.pdb
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\EntityFramework.SqlServer.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Hammock.pdb
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Core.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Cookies.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Facebook.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Google.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.OAuth.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Microsoft.Owin.Security.Twitter.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\Newtonsoft.Json.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Core.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Interfaces.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.Linq.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Reactive.PlatformServices.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Helpers.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Mvc.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Optimization.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.Razor.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Deployment.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\System.Web.WebPages.Razor.xml
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\bin\TweetSharp.pdb
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.InitialCreate.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.AddedUniqueColumnsAndImeiMaxLength.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.addedmigrations.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource1.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.postsource2.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja2.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja3.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja4.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.nowamigracja5.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.migr1.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.abc.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.elo.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.mig2.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._1211.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations._133.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.aa1.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.GenerateResource.Cache
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.csproj.CoreCompileInputs.cache
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.dll
+D:\temptemptmeptmeptmep\hashtrendyv2_Dzialajacy_Signal_TOP_10\HashTrendyV2-master\HashTrendyV2-master\obj\Debug\WebApiHash.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\WebApiHash.dll.config
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\WebApiHash.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\WebApiHash.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Antlr3.Runtime.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\EntityFramework.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\EntityFramework.SqlServer.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Hammock.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\LinqToTwitter.AspNet.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\LinqToTwitter.net.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Google.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Web.Infrastructure.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\MMLib.Core.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\MMLib.Extensions.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Newtonsoft.Json.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Owin.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.Core.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.Interfaces.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.Linq.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.PlatformServices.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Helpers.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Mvc.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Optimization.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Razor.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.Deployment.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.Razor.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\TweetSharp.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\WebGrease.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Antlr3.Runtime.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\EntityFramework.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\EntityFramework.SqlServer.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Hammock.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Google.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\MMLib.Core.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\MMLib.Core.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\MMLib.Extensions.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\MMLib.Extensions.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\Newtonsoft.Json.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.Core.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.Interfaces.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.Linq.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Reactive.PlatformServices.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Helpers.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Mvc.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Optimization.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.Razor.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.Deployment.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.Razor.xml
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\TweetSharp.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.InitialCreate.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.AddedUniqueColumnsAndImeiMaxLength.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.addedmigrations.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.postsource1.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.postsource2.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.nowamigracja.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.nowamigracja2.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.nowamigracja3.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.nowamigracja4.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.nowamigracja5.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.migr1.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.abc.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.elo.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.mig2.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations._1211.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations._133.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.aa1.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.uniquehashtags.resources
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.csproj.GenerateResource.Cache
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.csproj.CoreCompileInputs.cache
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.dll
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.pdb

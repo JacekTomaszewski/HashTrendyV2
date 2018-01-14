@@ -23,41 +23,45 @@
         <script src="/signalr/hubs"></script>
 
         <script type="text/javascript">
-        $(function () {
-        // Declare a proxy to reference the hub.
-        var notifications = $.connection.postHub;
 
-        //debugger;
-        // Create a function that the hub can call to broadcast messages.
-        notifications.client.updateMessages = function () {
-            getAllMessages()
+            var url = new URL(window.location.href);
+            var GetUrl = '/post/GetMessages/?hashtagname=undefinedhashtagname6'
+            if (url.searchParams.get("hashtagname") != null)
+                GetUrl = '/post/GetMessages/?hashtagname=' + url.searchParams.get("hashtagname");
+            $(function () {
+                // Declare a proxy to reference the hub.
+                var notifications = $.connection.postHub;
 
-        };
-        // Start the connection.
-        $.connection.hub.start().done(function () {
-            alert("connection started")
-            getAllMessages();
-        }).fail(function (e) {
-            alert(e);
-        });
-    });
+                //debugger;
+                // Create a function that the hub can call to broadcast messages.
+                notifications.client.updateMessages = function () {
+                    getAllMessages()
+
+                };
+                // Start the connection.
+                $.connection.hub.start().done(function () {
+                    getAllMessages();
+                }).fail(function (e) {
+                    alert(e);
+                });
+            });
 
 
-    function getAllMessages()
-    {
-        var tbl = $('#messagesTable');
-        $.ajax({
-            url: '/post/GetMessages',
-            contentType: 'application/html ; charset:utf-8',
-            type: 'GET',
-            dataType: 'html',
-        }).success(function (result) {
-            tbl.empty().append(result);
-            window.setTimeout(getAllMessages(), 5000)
-        }).error(function () {
+            function getAllMessages() {
 
-        });
-    }
+                var tbl = $('#messagesTable');
+                $.ajax({
+                    url: GetUrl,
+                    contentType: 'application/html ; charset:utf-8',
+                    type: 'GET',
+                    dataType: 'html',
+                }).success(function (result) {
+                    tbl.empty().append(result);
+                    window.setTimeout(getAllMessages(), 5000)
+                }).error(function () {
+
+                });
+            }
         </script>
 
     }

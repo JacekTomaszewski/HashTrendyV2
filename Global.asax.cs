@@ -23,12 +23,12 @@ namespace WebApiHash
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Database.SetInitializer<HashContext>(null);
-            SqlDependency.Start(connString);
+         SqlDependency.Start(connString);
         }
         protected void Application_End()
         {
             //Stop SQL dependency
-            SqlDependency.Stop(connString);
+        SqlDependency.Stop(connString);
         }
     }
 }

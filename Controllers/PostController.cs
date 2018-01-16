@@ -2,6 +2,8 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -38,9 +40,9 @@ namespace WebApiHash.Controllers
         {
             GetPostsFromTrendsToDb();
             //Thread thr = new Thread(() => GetPostsFromTrendsToDb());
-          // thr.Start();
+            // thr.Start();
             //Thread.Sleep(3600000);
-          
+
             return View(PostsView());
         }
 
@@ -88,8 +90,8 @@ namespace WebApiHash.Controllers
 
         public static void GetPostsFromSocialMedia(string hashtagname)
         {
-            TwitterController.GetTwitterPosts(hashtagname);
-            GooglePlusController.GetGooglePlusPosts(hashtagname);
+         //   TwitterController.GetTwitterPosts(hashtagname);
+      //      GooglePlusController.GetGooglePlusPosts(hashtagname);
             WykopController.GetWykopPosts(hashtagname);
             //Thread thr = new Thread(()=>TwitterController.GetTwitterPosts(hashtagname));
             //Thread thr2 = new Thread(() => GooglePlusController.GetGooglePlusPosts(hashtagname));
@@ -101,13 +103,23 @@ namespace WebApiHash.Controllers
             //System.Diagnostics.Debug.WriteLine("Jestem wątkiem" + thr3.Name);
         }
 
+        public static string RemoveDiacricts(string txt)
+        {
+            byte[] bytes = System.Text.Encoding.GetEncoding("Cyrillic").GetBytes(txt);
+            return System.Text.Encoding.ASCII.GetString(bytes);
+        }
+
         public static void DeserializertoDB(string PostSource, string Avatar, DateTime Date, string Username,
            string ContentDescription, string ContentImageUrl, string UrlAddress, List<string> listOfHashtags)
         {
             HashContext db = new HashContext();
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
             Post post = new Post() { Hashtags = new List<Hashtag>() };
-
+            ContentDescription = ContentDescription.Replace("'", "");
+            ContentDescription = ContentDescription.Replace("\"", "");
+            string hashtagsList = "";
+            string sqlCommand;
+            var hashsetList = new HashSet<string>(listOfHashtags, StringComparer.OrdinalIgnoreCase);
             post.PostSource = PostSource;
             post.Avatar = Avatar;
             post.Date = Date;

@@ -16,22 +16,22 @@ namespace WebApiHash
         WebApiHash.Context.HashContext db = new Context.HashContext();
         public List<Post> GetAllMessages(string hashtagname)
         {
-            string SelectCommand = "SELECT [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
+            string SelectCommand = "SELECT top(10) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
                 " [Extent1].[Avatar] AS[Avatar], [Extent1].[Username] AS[Username], [Extent1]" +
                 ".[ContentDescription] AS[ContentDescription], [Extent1].[ContentImageUrl] AS[ContentImageUrl], " +
                 "[Extent1].[DirectLinkToStatus] AS[DirectLinkToStatus], [Extent1].[PostSource] AS[PostSource] " +
                 "FROM[dbo].[Posts] AS[Extent1] INNER JOIN(SELECT[Extent2].[Post_PostId] AS[Post_PostId], [Extent3].[HashtagName]" +
                 " AS[HashtagName] FROM  [dbo].[PostHashtags] AS[Extent2] INNER JOIN[dbo].[Hashtags]" +
                 " AS[Extent3] ON [Extent3].[HashtagId] = [Extent2].[Hashtag_HashtagId]) AS[Join1] ON[Extent1].[PostId]" +
-                " = [Join1].[Post_PostId] WHERE [Join1].[HashtagName] LIKE '"+hashtagname+"'";
+                " = [Join1].[Post_PostId] WHERE [Join1].[HashtagName] LIKE '"+hashtagname+"' order by date desc";
 
             if (hashtagname == "undefinedhashtagname6")
             {
-                SelectCommand = @"SELECT top(100) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
+                SelectCommand = @"SELECT top(10) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
                 " [Extent1].[Avatar] AS[Avatar], [Extent1].[Username] AS[Username], [Extent1]" +
                 ".[ContentDescription] AS[ContentDescription], [Extent1].[ContentImageUrl] AS[ContentImageUrl], " +
                 "[Extent1].[DirectLinkToStatus] AS[DirectLinkToStatus], [Extent1].[PostSource] AS[PostSource] " +
-                "FROM[dbo].[Posts] as [Extent1]";
+                "FROM[dbo].[Posts] as [Extent1] order by date desc";
             }
             //else
             //{

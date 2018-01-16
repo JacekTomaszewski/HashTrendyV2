@@ -96,7 +96,7 @@ namespace WebApiHash.Controllers
 
             List<string> ListOfHashtags = new List<string>();
 
-            for (int i = 0; i < searchResponse[0].Count; i++)
+            for (int i = 0; i < searchResponse[0].Count-1; i++)
             {
                 for (int x = 0; x < searchResponse[0].Statuses[i].Entities.HashTagEntities.Count; x++)
                     ListOfHashtags.Add(searchResponse[0].Statuses[i].Entities.HashTagEntities[x].Tag);

@@ -57,7 +57,6 @@ namespace WebApiHash.Controllers
         {
             string postDescription = "";
             hashtagname = hashtagname[0] == '#' ? hashtagname.Remove(0, 1) : hashtagname;
-            List<string> ListOfHashtags = new List<string>();
             HashContext db = new HashContext();
             HttpWebResponse response;
             HttpWebRequest request = WebRequest.CreateHttp("http://a.wykop.pl/tag/index," + hashtagname + "/appkey," + appkey + "/page=1");
@@ -84,13 +83,14 @@ namespace WebApiHash.Controllers
 
             for (int i = 0; i < post.items.Count; i++)
             {
-
+                List<string> ListOfHashtags = new List<string>();
                 if (post.items[i].description != null)
                     postDescription = post.items[i].description;
                 else
                     postDescription = post.items[i].body;
 
                 ListOfHashtags = Regex.Split(postDescription, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#")).ToList();
+                ListOfHashtags.Add("#"+hashtagname);
                 PostController.DeserializertoDB("Wykop", post.items[i].author_avatar, System.DateTime.Parse(post.items[i].date),
                     post.items[i].author, postDescription, post.items[i].embed!=null ? post.items[i].embed.url : "",
                     post.items[i].url, ListOfHashtags);

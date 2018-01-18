@@ -20,10 +20,13 @@ namespace WebApiHash.Controllers
             XDocument feedXml = XDocument.Load(_blogURL);
             var feeds = (from feed in feedXml.Descendants("item") select feed).ToList();
             for (int i = 0; i < feeds.Count; i++)
+            {
                 PostController.DeserializertoDB("TVN24", "https://lh6.ggpht.com/jyTQdDRrVgrhnyf0pbiTPJZEp2APQoS5z3pc1LveN76ZWBaz2UEdNJRiwOIHhG5cNQ",
-                    System.Convert.ToDateTime(feeds[i].Element("pubDate").Value), "TVN24", Regex.Replace(feeds[i].Element("description").Value, @"(<img\/?[^>]+>)", @"",RegexOptions.IgnoreCase),
+                    System.Convert.ToDateTime(feeds[i].Element("pubDate").Value), "TVN24", Regex.Replace(feeds[i].Element("description").Value, @"(<img\/?[^>]+>)", @"", RegexOptions.IgnoreCase),
                     Regex.Match(feeds[i].Element("description").Value, "<img.+?src=[\"'](.+?)[\"'].+?>", RegexOptions.IgnoreCase).Groups[1].Value,
                     feeds[i].Element("link").Value, null);
+            }
+
         }
 
 
@@ -69,5 +72,6 @@ namespace WebApiHash.Controllers
             var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
             return View(postRss);
         }
+
     }
 }

@@ -28,10 +28,11 @@ namespace WebApiHash.Controllers
 
             return View();
         }
+        public static TwitterContext twitterctx = new TwitterContext(auth);
         public ActionResult TwitterTrends()
         {
             Models.Trend trendModel = new Models.Trend();
-            TwitterContext twitterctx = new TwitterContext(auth);
+           
             var trends = (from trend in twitterctx.Trends
                           where trend.Type == TrendType.Place
                                 && trend.WoeID == 23424923
@@ -81,23 +82,20 @@ namespace WebApiHash.Controllers
             ViewBag.AccessTokenSecret = accessToken.TokenSecret;
             return View();
         }
-
-       public static void GetTwitterPosts(string hashtagname)
+        public static void GetTwitterPosts(string hashtagname)
         {
-            TwitterContext twitterCtx = new TwitterContext(TwitterController.auth);
             var searchResponse =
-                (from search in twitterCtx.Search
+                (from search in twitterctx.Search
                  where search.Type == SearchType.Search &&
                        search.Query == hashtagname &&
                        search.ResultType == ResultType.Recent &&
                        search.TweetMode == TweetMode.Extended &&
-                       search.Count == 100
+                       search.Count == 20
                  select search).ToList();
-
-            List<string> ListOfHashtags = new List<string>();
 
             for (int i = 0; i < searchResponse[0].Count-1; i++)
             {
+                List<string> ListOfHashtags = new List<string>();
                 for (int x = 0; x < searchResponse[0].Statuses[i].Entities.HashTagEntities.Count; x++)
                     ListOfHashtags.Add(searchResponse[0].Statuses[i].Entities.HashTagEntities[x].Tag);
 

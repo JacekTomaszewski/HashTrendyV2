@@ -52,25 +52,29 @@ namespace WebApiHash.Controllers
             //              from b in m.Hashtags
             //              where b.HashtagName.Contains(hashtagname)
             //              select m).ToList();
-            //var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
+            //var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) ||
+            // po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || 
+            //   po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || 
+            // po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
             //result.AddRange(postRss);
 
             //var postSources = db.Posts.Where(p => p.PostSource != null).Select(p => p.PostSource).Distinct().ToList();
             //ViewBag.data = postSources.ToArray();
             //  return View(result);
+         //   RssController.GetRssFeedTVN24();
             return View();
         }
 
         public static void GetPostsFromTrendsToDb()
         {
-            HashController hash = new HashController();
-            DateTime dt1 = DateTime.Now.AddHours(-1.1);
-            var result = (from m in db.Trends
-                          where m.DateCreated > dt1
-                          select m).ToList();
-            for (int i = 0; i < result.Count; i++)
+            var result = (from trend in TwitterController.twitterctx.Trends
+                          where trend.Type == TrendType.Place
+                                && trend.WoeID == 23424923
+                                && trend.SearchUrl.Substring(28, 3).Equals("%23")
+                          select trend.Name).ToList();
+                for (int i = 0; i < result.Count; i++)
             {
-                GetPostsFromSocialMedia(result.ElementAt(i).TrendName);
+                GetPostsFromSocialMedia(RemoveDiacricts(result.ElementAt(i)));
             }
         }
 
@@ -90,17 +94,9 @@ namespace WebApiHash.Controllers
 
         public static void GetPostsFromSocialMedia(string hashtagname)
         {
-         //   TwitterController.GetTwitterPosts(hashtagname);
-      //      GooglePlusController.GetGooglePlusPosts(hashtagname);
             WykopController.GetWykopPosts(hashtagname);
-            //Thread thr = new Thread(()=>TwitterController.GetTwitterPosts(hashtagname));
-            //Thread thr2 = new Thread(() => GooglePlusController.GetGooglePlusPosts(hashtagname));
-            // Thread thr3 = new Thread(() => WykopController.GetWykopPosts(hashtagname));
-            // thr.Start();
-            //System.Diagnostics.Debug.WriteLine("Jestem wątkiem"+thr.Name);
-            //  thr2.Start();
-            //thr3.Start();
-            //System.Diagnostics.Debug.WriteLine("Jestem wątkiem" + thr3.Name);
+            GooglePlusController.GetGooglePlusPosts(hashtagname);
+            TwitterController.GetTwitterPosts(hashtagname);
         }
 
         public static string RemoveDiacricts(string txt)
@@ -108,18 +104,12 @@ namespace WebApiHash.Controllers
             byte[] bytes = System.Text.Encoding.GetEncoding("Cyrillic").GetBytes(txt);
             return System.Text.Encoding.ASCII.GetString(bytes);
         }
-
         public static void DeserializertoDB(string PostSource, string Avatar, DateTime Date, string Username,
            string ContentDescription, string ContentImageUrl, string UrlAddress, List<string> listOfHashtags)
         {
-            HashContext db = new HashContext();
             Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
             Post post = new Post() { Hashtags = new List<Hashtag>() };
-            ContentDescription = ContentDescription.Replace("'", "");
-            ContentDescription = ContentDescription.Replace("\"", "");
-            string hashtagsList = "";
-            string sqlCommand;
-            var hashsetList = new HashSet<string>(listOfHashtags, StringComparer.OrdinalIgnoreCase);
+            listOfHashtags = listOfHashtags.Distinct(StringComparer.CurrentCultureIgnoreCase).ToList();
             post.PostSource = PostSource;
             post.Avatar = Avatar;
             post.Date = Date;
@@ -135,8 +125,9 @@ namespace WebApiHash.Controllers
                 string hashtagnamefor = listOfHashtags.ElementAt(x);
                 if (hashtagnamefor.Substring(0, 1) == "#")
                 {
-                    hashtagnamefor.Remove(0, 1);
+                    hashtagnamefor=hashtagnamefor.Remove(0, 1);
                 }
+                hashtagnamefor = RemoveDiacricts(hashtagnamefor);
                 var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
                 if (query == null)
                 {

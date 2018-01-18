@@ -23,7 +23,7 @@ namespace WebApiHash
                 "FROM[dbo].[Posts] AS[Extent1] INNER JOIN(SELECT[Extent2].[Post_PostId] AS[Post_PostId], [Extent3].[HashtagName]" +
                 " AS[HashtagName] FROM  [dbo].[PostHashtags] AS[Extent2] INNER JOIN[dbo].[Hashtags]" +
                 " AS[Extent3] ON [Extent3].[HashtagId] = [Extent2].[Hashtag_HashtagId]) AS[Join1] ON[Extent1].[PostId]" +
-                " = [Join1].[Post_PostId] WHERE [Join1].[HashtagName] LIKE '"+hashtagname+"' order by date desc";
+                " = [Join1].[Post_PostId] WHERE [Join1].[HashtagName] LIKE '"+hashtagname+"' order by date desc"; 
 
             if (hashtagname == "undefinedhashtagname6")
             {

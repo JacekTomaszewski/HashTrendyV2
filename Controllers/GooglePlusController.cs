@@ -35,7 +35,7 @@ namespace WebApiHash.Controllers
                 PostController.DeserializertoDB("Google Plus", jsonResult.items[i].actor.image.url, System.DateTime.Parse(jsonResult.items[i].published),
                    jsonResult.items[i].actor.displayName, jsonResult.items[i].@object.content,
                    jsonResult.items[i].@object.attachments != null ?
-                   jsonResult.items[i].@object.attachments[0].image.url !=null ?
+                   jsonResult.items[i].@object.attachments[0].image !=null ?
                     jsonResult.items[i].@object.attachments[0].image.url
                    : null
                    : null, jsonResult.items[i].@object.url, Regex.Split(jsonResult.items[i].@object.content, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#")).ToList());

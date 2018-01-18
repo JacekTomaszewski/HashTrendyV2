@@ -526,7 +526,6 @@ D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.xml
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.Deployment.xml
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\System.Web.WebPages.Razor.xml
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\bin\TweetSharp.pdb
-D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.InitialCreate.resources
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.AddedUniqueColumnsAndImeiMaxLength.resources
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.Migrations.addedmigrations.resources

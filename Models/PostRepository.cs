@@ -7,37 +7,67 @@ using System.Web;
 using WebApiHash.hubs;
 using WebApiHash.Models;
 using System.Data;
+using WebApiHash.Controllers;
 
 namespace WebApiHash
 {
     public class PostRepository
     {
-        readonly string _connString = ConfigurationManager.ConnectionStrings["HashContext"].ConnectionString;
+        readonly static string _connString = ConfigurationManager.ConnectionStrings["HashContext"].ConnectionString;
         WebApiHash.Context.HashContext db = new Context.HashContext();
+
+        public static List<string> GetPostUrls()
+        {
+            var res = new List<string>();
+            using (SqlConnection connection = new SqlConnection(_connString))
+            {
+                connection.Open();
+                var q = "SELECT DISTINCT DirectLinkToStatus FROM Posts WHERE DirectLinkToStatus IS NOT NULL";
+                using (SqlCommand command = new SqlCommand(q, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            res.Add(reader.GetString(0).ToLower());
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return res;
+        }
+
         public List<Post> GetAllMessages(string hashtagname)
         {
-            string SelectCommand = "SELECT top(10) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
+
+            string SelectCommand = "SELECT top(100) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
                 " [Extent1].[Avatar] AS[Avatar], [Extent1].[Username] AS[Username], [Extent1]" +
                 ".[ContentDescription] AS[ContentDescription], [Extent1].[ContentImageUrl] AS[ContentImageUrl], " +
                 "[Extent1].[DirectLinkToStatus] AS[DirectLinkToStatus], [Extent1].[PostSource] AS[PostSource] " +
                 "FROM[dbo].[Posts] AS[Extent1] INNER JOIN(SELECT[Extent2].[Post_PostId] AS[Post_PostId], [Extent3].[HashtagName]" +
                 " AS[HashtagName] FROM  [dbo].[PostHashtags] AS[Extent2] INNER JOIN[dbo].[Hashtags]" +
                 " AS[Extent3] ON [Extent3].[HashtagId] = [Extent2].[Hashtag_HashtagId]) AS[Join1] ON[Extent1].[PostId]" +
-                " = [Join1].[Post_PostId] WHERE [Join1].[HashtagName] LIKE '"+hashtagname+"' order by date desc"; 
+                " = [Join1].[Post_PostId] WHERE [Join1].[HashtagName] LIKE '" + hashtagname + "'" +
+                "union " +
+                "SELECT top(100) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
+                " [Extent1].[Avatar] AS[Avatar], [Extent1].[Username] AS[Username], [Extent1]" +
+                ".[ContentDescription] AS[ContentDescription], [Extent1].[ContentImageUrl] AS[ContentImageUrl], " +
+                "[Extent1].[DirectLinkToStatus] AS[DirectLinkToStatus], [Extent1].[PostSource] AS[PostSource] " +
+                "FROM[dbo].[Posts] AS[Extent1]" +
+                "Where([Extent1].[PostSource] = 'RMF24 Sport' OR[Extent1].[PostSource] = 'RMF24 Swiat' OR[Extent1].[PostSource] = 'Wyborcza'" +
+                "OR[Extent1].[PostSource] = 'TVN24') AND[Extent1].[ContentDescription] LIKE '%" + hashtagname + "%'" +
+                " order by date desc";
 
             if (hashtagname == "undefinedhashtagname6")
             {
-                SelectCommand = @"SELECT top(10) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
+                SelectCommand = @"SELECT top(100) [Extent1].[PostId] AS[PostId], [Extent1].[Date] AS[Date]," +
                 " [Extent1].[Avatar] AS[Avatar], [Extent1].[Username] AS[Username], [Extent1]" +
                 ".[ContentDescription] AS[ContentDescription], [Extent1].[ContentImageUrl] AS[ContentImageUrl], " +
                 "[Extent1].[DirectLinkToStatus] AS[DirectLinkToStatus], [Extent1].[PostSource] AS[PostSource] " +
                 "FROM[dbo].[Posts] as [Extent1] order by date desc";
             }
-            //else
-            //{
-            //    SelectCommand = @"SELECT top (1) contentdescription,avatar,date,contentimageurl,
-            //    directlinktostatus, postsource,username from posts order by date desc";
-            //}
+
             var messages = new List<Post>();
             using (var connection = new SqlConnection(_connString))
             {
@@ -51,7 +81,6 @@ namespace WebApiHash
                     dependency.OnChange += new OnChangeEventHandler(dependency_OnChange);
                     //if (connection.State == ConnectionState.Closed)
                     //    connection.Open();
-
                     // var reader = command.ExecuteReader();
                     using (var reader = command.ExecuteReader())
                         return messages = reader.Cast<IDataRecord>()
@@ -71,9 +100,9 @@ namespace WebApiHash
                 }
 
             }
-        
 
 
+            
         }
 
 
@@ -82,6 +111,7 @@ namespace WebApiHash
             if (e.Type == SqlNotificationType.Change)
             {
                 PostHub.SendMessages();
+
             }
         }
     }

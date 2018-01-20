@@ -44,7 +44,7 @@ namespace WebApiHash.Controllers
                 trends.First().Locations != null
                 )
             {
-                ViewData["Lokacja"] = "Trendy wyszukiwane dla: " + trends.First().Locations.First().Name;
+                ViewData["Lokacja"] = "Popularne hashtagi wyszukiwane dla: " + trends.First().Locations.First().Name;
             }
             for (int i = 0; i < trends.Count; i++)
             {
@@ -92,14 +92,14 @@ namespace WebApiHash.Controllers
                        search.TweetMode == TweetMode.Extended &&
                        search.Count == 20
                  select search).ToList();
-
-            for (int i = 0; i < searchResponse[0].Count-1; i++)
+            if (searchResponse[0].Statuses.Count > 0)
+                for (int i = 0; i < searchResponse[0].Statuses.Count; i++)
             {
                 List<string> ListOfHashtags = new List<string>();
-                for (int x = 0; x < searchResponse[0].Statuses[i].Entities.HashTagEntities.Count; x++)
-                    ListOfHashtags.Add(searchResponse[0].Statuses[i].Entities.HashTagEntities[x].Tag);
+                        for (int x = 0; x < searchResponse[0].Statuses[i].Entities.HashTagEntities.Count; x++)
+                            ListOfHashtags.Add(searchResponse[0].Statuses[i].Entities.HashTagEntities[x].Tag);
 
-                PostController.DeserializertoDB("Twitter", searchResponse[0].Statuses[i].User.ProfileImageUrl, searchResponse[0].Statuses[i].CreatedAt,
+                PostController.DeserializertoDB("Twitter", searchResponse[0].Statuses[i].User.ProfileImageUrl, searchResponse[0].Statuses[i].CreatedAt.AddHours(+1),
                     searchResponse[0].Statuses[i].User.Name, searchResponse[0].Statuses[i].FullText,
                     searchResponse[0].Statuses[i].Entities.MediaEntities.Count > 0 ?
                 searchResponse[0].Statuses[i].Entities.MediaEntities[0].MediaUrl : "", "https://twitter.com/statuses/"+searchResponse[0].Statuses[i].StatusID, ListOfHashtags);

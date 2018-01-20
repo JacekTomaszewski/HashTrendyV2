@@ -383,6 +383,7 @@
     <Content Include="Views\Post\GetPostsFromTrendsToDb.cshtml" />
     <Content Include="Views\Wykop\RequestView.cshtml" />
     <Content Include="Views\Post\_Partial.cshtml" />
+    <Content Include="Views\Post\SearchPostByHashtag.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

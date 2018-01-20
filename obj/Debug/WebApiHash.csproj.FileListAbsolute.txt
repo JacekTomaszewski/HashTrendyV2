@@ -548,3 +548,4 @@ D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.csproj.GenerateReso
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.csproj.CoreCompileInputs.cache
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.dll
 D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.pdb
+D:\ProgramowanieGIT\HashTrendyV2 - Copy\obj\Debug\WebApiHash.csprojResolveAssemblyReference.cache

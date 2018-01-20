@@ -80,21 +80,21 @@ namespace WebApiHash.Controllers
                 }
             }
             WykopDeserializer post = JsonConvert.DeserializeObject<WykopDeserializer>(result);
-
+            List<string> ListOfHashtags = new List<string>();
             for (int i = 0; i < post.items.Count; i++)
             {
-                List<string> ListOfHashtags = new List<string>();
+               
                 if (post.items[i].description != null)
                     postDescription = post.items[i].description;
                 else
                     postDescription = post.items[i].body;
-
+                ListOfHashtags.Clear();
                 ListOfHashtags = Regex.Split(postDescription, @"\W(\#[a-zA-Z]+\b)(?!;)").Where(b => b.StartsWith("#")).ToList();
                 ListOfHashtags.Add("#"+hashtagname);
                 PostController.DeserializertoDB("Wykop", post.items[i].author_avatar, System.DateTime.Parse(post.items[i].date),
                     post.items[i].author, postDescription, post.items[i].embed!=null ? post.items[i].embed.url : "",
                     post.items[i].url, ListOfHashtags);
-            };
+            }
 
         }
     }

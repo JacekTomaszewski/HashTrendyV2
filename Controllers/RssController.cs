@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.Mvc;
 using System.Xml.Linq;
 using WebApiHash.Context;
-using WebApiHash.Models;
 
 namespace WebApiHash.Controllers
 {
     public class RssController : Controller
     {
         public static HashContext db = new HashContext();
+
 
         public static void GetRssFeedTVN24()
         {
@@ -22,11 +20,10 @@ namespace WebApiHash.Controllers
             for (int i = 0; i < feeds.Count; i++)
             {
                 PostController.DeserializertoDB("TVN24", "https://lh6.ggpht.com/jyTQdDRrVgrhnyf0pbiTPJZEp2APQoS5z3pc1LveN76ZWBaz2UEdNJRiwOIHhG5cNQ",
-                    System.Convert.ToDateTime(feeds[i].Element("pubDate").Value), "TVN24", Regex.Replace(feeds[i].Element("description").Value, @"(<img\/?[^>]+>)", @"", RegexOptions.IgnoreCase),
+                    DateFormatChangeTVN(feeds[i].Element("pubDate").Value), "TVN24", Regex.Replace(feeds[i].Element("description").Value, @"(<img\/?[^>]+>)", @"", RegexOptions.IgnoreCase),
                     Regex.Match(feeds[i].Element("description").Value, "<img.+?src=[\"'](.+?)[\"'].+?>", RegexOptions.IgnoreCase).Groups[1].Value,
                     feeds[i].Element("link").Value, null);
             }
-
         }
 
 
@@ -37,11 +34,13 @@ namespace WebApiHash.Controllers
             XDocument feedXml = XDocument.Load(_blogURL);
             var feeds = (from feed in feedXml.Descendants("item") select feed).ToList();
             for (int i = 0; i < feeds.Count; i++)
+            {
                 PostController.DeserializertoDB("Wyborcza", "http://bi.im-g.pl/im/4/16968/m16968574,OG-FACEBOOK-WYBORCZAPL.jpg",
-                    System.Convert.ToDateTime(feeds[i].Element("pubDate").Value), "Wyborcza", feeds[i].Element("title").Value, "",
+                    DateFormatChange(feeds[i].Element("pubDate").Value), "Wyborcza", feeds[i].Element("title").Value, "",
                     feeds[i].Element("link").Value, null);
-        }
 
+            }
+        }
 
 
         public static void GetRssFeedRMF24Swiat()
@@ -50,9 +49,11 @@ namespace WebApiHash.Controllers
             XDocument feedXml = XDocument.Load(_blogURL);
             var feeds = (from feed in feedXml.Descendants("item") select feed).ToList();
             for (int i = 0; i < feeds.Count; i++)
+            {
                 PostController.DeserializertoDB("RMF24 Swiat", "http://www.gruparmf.pl/_files/Upload/Files/Presspack/RMF-FM-logo.jpg",
-                    System.Convert.ToDateTime(feeds[i].Element("pubDate").Value), "RMF24 Swiat", feeds[i].Element("title").Value,"",
+                    DateFormatChange(feeds[i].Element("pubDate").Value), "RMF24 Swiat", feeds[i].Element("title").Value, "",
                     feeds[i].Element("link").Value, null);
+            }
         }
 
         public static void GetRssFeedRMF24Sport()
@@ -61,17 +62,116 @@ namespace WebApiHash.Controllers
             XDocument feedXml = XDocument.Load(_blogURL);
             var feeds = (from feed in feedXml.Descendants("item") select feed).ToList();
             for (int i = 0; i < feeds.Count; i++)
+            {
                 PostController.DeserializertoDB("RMF24 Sport", "http://www.gruparmf.pl/_files/Upload/Files/Presspack/RMF-FM-logo.jpg",
-                    System.Convert.ToDateTime(feeds[i].Element("pubDate").Value), "RMF24 Sport", feeds[i].Element("title").Value,"",
+                    DateFormatChange(feeds[i].Element("pubDate").Value), "RMF24 Sport", feeds[i].Element("title").Value, "",
                     feeds[i].Element("link").Value, null);
+            }
         }
 
 
-        public ActionResult RssReaderListHashtag(string hashtagname)
+        public static void GetRss()
         {
-            var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
-            return View(postRss);
+            GetRssFeedTVN24();
+            GetRssFeedWyborcza();
+            GetRssFeedRMF24Swiat();
+            GetRssFeedRMF24Sport();
         }
+
+        public static DateTime DateFormatChange(String s)
+        {
+            string day;
+            string month;
+            string year;
+            string hour;
+            string min;
+            string sec;
+            string dateString;
+            string time;
+
+            DateTime date;
+
+            day = s.Substring(5, 2);
+            day = abc(day);
+            month = s.Substring(8, 3);
+            month = abc(month);
+            year = s.Substring(12, 4);
+
+
+            time = s.Substring(17, 8);
+            string[] words;
+
+            words = time.Split(':');
+            hour = words[0];
+            hour = abc(hour);
+            min = words[1];
+            min = abc(min);
+            sec = words[2];
+            sec = abc(sec);
+            if (sec == "") sec = "00";
+
+            dateString = day + "-" + month + "-" + year + " " + hour + ":" + min + ":" + sec + ".000";
+
+            date = System.Convert.ToDateTime(dateString);
+
+            return (date);
+
+        }
+
+        public static DateTime DateFormatChangeTVN(String s)
+        {
+            string day;
+            string month;
+            string year;
+            string hour;
+            string min;
+            string sec;
+            string dateString;
+            string time;
+
+            DateTime date;
+
+            day = s.Substring(5, 2);
+            day = abc(day);
+            month = s.Substring(8, 3);
+            month = abc(month);
+            year = "20" + s.Substring(12, 2);
+
+
+            time = s.Substring(15, 8);
+            string[] words;
+
+            words = time.Split(':');
+            hour = words[0];
+            hour = abc(hour);
+            min = words[1];
+            min = abc(min);
+            sec = words[2];
+            sec = abc(sec);
+
+            if (sec == "") sec = "00";
+
+            dateString = day + "-" + month + "-" + year + " " + hour + ":" + min + ":" + sec + ".000";
+
+            date = System.Convert.ToDateTime(dateString);
+
+            return (date);
+
+        }
+
+        public static string abc(string s)
+        {
+            string a = "";
+            if (s.Length == 1)
+            {
+                a = "0" + s;
+
+                return a;
+            }
+            else return s;
+        }
+
+
 
     }
 }

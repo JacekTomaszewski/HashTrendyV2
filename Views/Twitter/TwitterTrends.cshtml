@@ -1,10 +1,14 @@
 ﻿@model List<LinqToTwitter.Trend>
 
+<br /><br /><br />
+<img width=480 height=170 src="~/Content/Images/trend.png" />
+<br />
+<h1><b>@ViewData["Lokacja"]</b></h1><br /><hr />
 
-
-    <h1><b>@ViewData["Lokacja"]</b></h1><br />
 @foreach (var item in Model)
-{<a href="/post/SpecificPostsView?hashtagname=@item.Name.Replace("#","")">@item.Name</a><br />}
-
-
-
+{
+    <div class="contentFont">
+        <a href="/post/SpecificPostsView?hashtagname=@WebApiHash.Controllers.PostController.RemoveDiacricts(item.Name.Replace("#", ""))">@item.Name</a><br />
+    </div>
+    <hr />
+}

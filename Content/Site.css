@@ -7,6 +7,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    text-align: center;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +22,32 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+body > div.navbar.navbar-inverse.navbar-fixed-top > div > div.navbar-collapse.collapse {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentFont {
+    font-size: 17px;
+}
+
+#messagesTable img {
+    max-height: 200px;
+    max-height: 200px;
+}
+
+#hashtag {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#messagesTable > h1 > img {
+    max-height: 50px; 
+    max-width: 50px;
+}
+
+#messagesTable > h2 > img {
+    max-height: 250px;
 }

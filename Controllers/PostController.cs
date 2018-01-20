@@ -38,30 +38,31 @@ namespace WebApiHash.Controllers
 
         public ActionResult AsyncUpdateDB()
         {
+            //to dziala
+            RssController.GetRss();
             GetPostsFromTrendsToDb();
-            //Thread thr = new Thread(() => GetPostsFromTrendsToDb());
-            // thr.Start();
-            //Thread.Sleep(3600000);
+            
+            //i to tez
+            //while (true)
+            //{ WykopController.GetWykopPosts("#duda"); }
 
-            return View(PostsView());
+
+            return View("PostsView");
+        }
+
+        public ActionResult GetSpecificPosts(string hashtagname)
+        {
+            GetPostsFromSocialMedia(hashtagname);
+            return View();
         }
 
         public ActionResult SpecificPostsView(string hashtagname)
         {
-            //var result = (from m in db.Posts
-            //              from b in m.Hashtags
-            //              where b.HashtagName.Contains(hashtagname)
-            //              select m).ToList();
-            //var postRss = db.Posts.Where(po => po.PostSource == "Wyborcza" && po.ContentDescription.Contains(hashtagname) ||
-            // po.PostSource == "TVN24" && po.ContentDescription.Contains(hashtagname) || 
-            //   po.PostSource == "RMF24 Swiat" && po.ContentDescription.Contains(hashtagname) || 
-            // po.PostSource == "RMF24 Sport" && po.ContentDescription.Contains(hashtagname)).ToList();
-            //result.AddRange(postRss);
+            return View();
+        }
 
-            //var postSources = db.Posts.Where(p => p.PostSource != null).Select(p => p.PostSource).Distinct().ToList();
-            //ViewBag.data = postSources.ToArray();
-            //  return View(result);
-         //   RssController.GetRssFeedTVN24();
+        public ActionResult SearchPostByHashtag()
+        {
             return View();
         }
 
@@ -104,44 +105,58 @@ namespace WebApiHash.Controllers
             byte[] bytes = System.Text.Encoding.GetEncoding("Cyrillic").GetBytes(txt);
             return System.Text.Encoding.ASCII.GetString(bytes);
         }
+
+        private static bool IsDuplicate(string urlAddress)
+        {
+            var urlAddresses = PostRepository.GetPostUrls();
+            return urlAddresses.Contains(urlAddress.ToLower());
+        }
+
         public static void DeserializertoDB(string PostSource, string Avatar, DateTime Date, string Username,
            string ContentDescription, string ContentImageUrl, string UrlAddress, List<string> listOfHashtags)
         {
-            Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
-            Post post = new Post() { Hashtags = new List<Hashtag>() };
-            listOfHashtags = listOfHashtags.Distinct(StringComparer.CurrentCultureIgnoreCase).ToList();
-            post.PostSource = PostSource;
-            post.Avatar = Avatar;
-            post.Date = Date;
-            post.Username = Username;
-            post.ContentDescription = ContentDescription;
-            if (ContentImageUrl != "")
+            if (UrlAddress != null && !IsDuplicate(UrlAddress))
             {
-                post.ContentImageUrl = ContentImageUrl;
+                HashContext db = new HashContext();
+                Hashtag hashtag = new Hashtag() { Posts = new List<Post>() };
+                Post post = new Post() { Hashtags = new List<Hashtag>() };
+                post.PostSource = PostSource;
+                post.Avatar = Avatar;
+                post.Date = Date;
+                post.Username = Username;
+                post.ContentDescription = ContentDescription;
+                post.DirectLinkToStatus = UrlAddress;
+                if (ContentImageUrl != "")
+                {
+                    post.ContentImageUrl = ContentImageUrl;
+                }
+                if(listOfHashtags!=null)
+                { 
+                listOfHashtags = listOfHashtags.Distinct(StringComparer.CurrentCultureIgnoreCase).ToList();
+                for (int x = 0; x < listOfHashtags.Count; x++)
+                {
+                    string hashtagnamefor = listOfHashtags.ElementAt(x);
+                    if (hashtagnamefor.Substring(0, 1) == "#")
+                    {
+                        hashtagnamefor = hashtagnamefor.Remove(0, 1);
+                    }
+                    hashtagnamefor = RemoveDiacricts(hashtagnamefor);
+                    var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
+                    if (query == null)
+                    {
+                        hashtag.HashtagName = hashtagnamefor;
+                        hashtag.Posts.Add(post);
+                        db.Hashtags.Add(hashtag);
+                    }
+                    else
+                    {
+                        post.Hashtags.Add(query);
+                    }
+                }
+                }
+                db.Posts.Add(post);
+                db.SaveChanges();
             }
-
-            for (int x = 0; x < listOfHashtags.Count; x++)
-            {
-                string hashtagnamefor = listOfHashtags.ElementAt(x);
-                if (hashtagnamefor.Substring(0, 1) == "#")
-                {
-                    hashtagnamefor=hashtagnamefor.Remove(0, 1);
-                }
-                hashtagnamefor = RemoveDiacricts(hashtagnamefor);
-                var query = (from z in db.Hashtags where z.HashtagName == hashtagnamefor select z).SingleOrDefault();
-                if (query == null)
-                {
-                    hashtag.HashtagName = hashtagnamefor;
-                    hashtag.Posts.Add(post);
-                    db.Hashtags.Add(hashtag);
-                }
-                else
-                {
-                    post.Hashtags.Add(query);
-                }
-            }
-            db.Posts.Add(post);
-            db.SaveChanges();
         }
 
 

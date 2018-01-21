@@ -44,7 +44,7 @@ namespace WebApiHash.Controllers
                 trends.First().Locations != null
                 )
             {
-                ViewData["Lokacja"] = "Popularne hashtagi wyszukiwane dla: " + trends.First().Locations.First().Name;
+                ViewData["Lokacja"] = "Popularne hashtagi wyszukiwane dla Polski";
             }
             for (int i = 0; i < trends.Count; i++)
             {

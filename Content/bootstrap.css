@@ -240,6 +240,7 @@ textarea {
 
 table {
     border-collapse: collapse;
+    border-spacing: 0;
 }
 
 caption {
@@ -1796,6 +1797,7 @@ pre {
     max-width: 100%;
     margin-bottom: 1rem;
     background-color: transparent;
+    border-collapse: collapse !important;
 }
 
     .table th,
@@ -3230,9 +3232,13 @@ input[type="button"].btn-block {
     display: none;
 }
 
-    .collapse.show {
-        display: block;
-    }
+.collapse.in {
+    display: block;
+}
+
+.collapse.show {
+    display: block;
+}
 
 tr.collapse.show {
     display: table-row;

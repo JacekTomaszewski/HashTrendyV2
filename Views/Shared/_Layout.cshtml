@@ -20,11 +20,10 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Popularne trendy", "TwitterTrends", "Twitter")</li>
-                    <li>@Html.ActionLink("Popularne trendy - widok postów", "PostsView", "Post")</li>
-                    <li>@Html.ActionLink("Wyszukaj posty dla hashtaga", "SearchPostByHashtag", "Post")</li>
-                    <li>@Html.ActionLink("Start Async", "AsyncUpdateDB", "Post")</li>
+                    <li>@Html.ActionLink("Ostatnio dodane posty", "PostsView", "Post")</li>
+                    <li>@Html.ActionLink("Wyszukaj posty", "SearchPostByHashtag", "Post")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+             
             </div>
         </div>
     </div>
